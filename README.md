@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Basys AI Landing Page
+
+This repository contains the Basys AI company landing page built with Next.js (App Router) and Tailwind CSS.
+
+## Project Direction
+
+- Convert provided HTML into Next.js components.
+- Use Tailwind CSS for styling and layout.
+- Extract and reuse shared components wherever possible (for example: `Navbar`, `Footer`, `Button`, and section components).
+- Keep the code modular and easy to extend as new landing page sections are added.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start by editing `app/page.tsx` and adding shared components under a dedicated components directory (for example `components/`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Recommended Structure
 
-## Learn More
+- `app/` for routes and page composition.
+- `components/` for reusable UI and landing sections.
+- `public/` for static assets (logos, icons, images).
+- `DESIGN.md` for brand and style guidance.
 
-To learn more about Next.js, take a look at the following resources:
+## Styling Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Follow the visual and brand guidance in `DESIGN.md`.
+- Use utility-first Tailwind classes and reusable component APIs instead of repeating raw markup.
+- Keep components focused and composable.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## References
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
