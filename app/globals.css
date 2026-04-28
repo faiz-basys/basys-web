@@ -1,26 +1,238 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f9fc;
+  --on-background: #191c1e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --color-background: #f7f9fc;
+  --color-on-background: #191c1e;
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f7;
+  --color-surface-container: #eceef1;
+  --color-surface-container-high: #e6e8eb;
+  --color-surface-container-highest: #e0e3e6;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #45464d;
+  --color-on-tertiary-container: #858382;
+  --color-outline: #76777d;
+  --color-outline-variant: #c6c6cd;
+  --radius-pill: 9999px;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--on-background);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+}
+
+/* Hero section — AI SaaS motion (respects reduced motion) */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(1.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-orb-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 0.62;
+  }
+}
+
+@keyframes hero-grid-drift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 48px 48px, 48px 48px;
+  }
+}
+
+@keyframes hero-shine {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+@keyframes hero-console-glow {
+  0%,
+  100% {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15),
+      0 0 0 1px rgb(0 0 0 / 0.04);
+  }
+  50% {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.2),
+      0 0 40px -8px rgb(0 0 0 / 0.12), 0 0 0 1px rgb(0 0 0 / 0.06);
+  }
+}
+
+@keyframes hero-scan {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.35;
+  }
+  92% {
+    opacity: 0.35;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+@keyframes hero-pill-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(0 0 0 / 0.04);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.08);
+  }
+}
+
+@keyframes agent-back-pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes agent-flyout-down {
+  from {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 220px, 0) scale(0.96);
+  }
+}
+
+/* Hero stack — agent inference UI (EQ bars; step fill driven in React from progress) */
+@keyframes agent-eq-bar {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes agent-shimmer-reason {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@layer utilities {
+  .animate-hero-fade-up {
+    animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-hero-fade-in-right {
+    animation: hero-fade-in-right 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-hero-orb {
+    animation: hero-orb-breathe 12s ease-in-out infinite;
+  }
+  .animate-hero-grid {
+    animation: hero-grid-drift 24s linear infinite;
+  }
+  .animate-hero-shine {
+    animation: hero-shine 2.5s ease-in-out infinite;
+  }
+  .animate-hero-console {
+    animation: hero-console-glow 4s ease-in-out infinite;
+  }
+  .animate-hero-scan {
+    animation: hero-scan 4.5s ease-in-out infinite;
+  }
+  .animate-hero-pill {
+    animation: hero-pill-pulse 3s ease-in-out infinite;
+  }
+  .animate-agent-back-pop-in {
+    animation: agent-back-pop-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-agent-flyout-down {
+    animation: agent-flyout-down 0.95s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .animate-agent-eq-bar {
+    animation: agent-eq-bar 0.9s ease-in-out infinite;
+    transform-origin: bottom center;
+  }
+  .animate-agent-shimmer-reason {
+    animation: agent-shimmer-reason 3.5s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-fade-up,
+  .animate-hero-fade-in-right,
+  .animate-hero-orb,
+  .animate-hero-grid,
+  .animate-hero-shine,
+  .animate-hero-console,
+  .animate-hero-scan,
+  .animate-hero-pill,
+  .animate-agent-back-pop-in,
+  .animate-agent-flyout-down,
+  .animate-agent-eq-bar,
+  .animate-agent-shimmer-reason {
+    animation: none !important;
+  }
+  .animate-hero-fade-up,
+  .animate-hero-fade-in-right {
+    opacity: 1;
+    transform: none;
+  }
+  .animate-hero-orb {
+    transform: none;
+  }
 }

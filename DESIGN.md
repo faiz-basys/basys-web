@@ -1,5 +1,5 @@
 ---
-name: Precision Intelligence
+name: Basys Web
 colors:
     surface: "#f7f9fc"
     surface-dim: "#d8dadd"
