@@ -32,7 +32,7 @@ export default function NewsPage() {
             </div>
 
             <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
-                <article className="group col-span-12 flex cursor-pointer flex-col justify-between rounded-[2rem] border border-outline-variant bg-surface-container-lowest p-8 transition-colors hover:border-primary md:col-span-8">
+                <article className="group col-span-12 flex cursor-pointer flex-col justify-between rounded-4xl border border-outline-variant bg-surface-container-lowest p-8 transition-colors hover:border-primary md:col-span-8">
                     <div>
                         <div className="mb-6 flex items-start justify-between">
                             <span className="text-xs font-semibold tracking-widest text-on-tertiary-container uppercase">
@@ -68,7 +68,7 @@ export default function NewsPage() {
                     </div>
                 </article>
 
-                <article className="col-span-12 flex cursor-pointer flex-col justify-between rounded-[2rem] border border-transparent bg-surface-container p-8 transition-colors hover:bg-surface-container-high md:col-span-4">
+                <article className="col-span-12 flex cursor-pointer flex-col justify-between rounded-4xl border border-transparent bg-surface-container p-8 transition-colors hover:bg-surface-container-high md:col-span-4">
                     <div>
                         <div className="mb-6 flex items-center gap-4">
                             <span
@@ -96,8 +96,8 @@ export default function NewsPage() {
                     </div>
                 </article>
 
-                <article className="group col-span-12 rounded-[2rem] border border-outline-variant bg-surface-container-lowest p-8 md:col-span-4">
-                    <div className="mb-6 h-40 overflow-hidden rounded-[1rem]">
+                <article className="group col-span-12 rounded-4xl border border-outline-variant bg-surface-container-lowest p-8 md:col-span-4">
+                    <div className="mb-6 h-40 overflow-hidden rounded-2xl">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -127,7 +127,7 @@ export default function NewsPage() {
                     </div>
                 </article>
 
-                <article className="col-span-12 rounded-[2rem] border border-outline-variant bg-surface-container-lowest p-8 transition-shadow hover:shadow-sm md:col-span-4">
+                <article className="col-span-12 rounded-4xl border border-outline-variant bg-surface-container-lowest p-8 transition-shadow hover:shadow-sm md:col-span-4">
                     <div className="mb-6 flex justify-between">
                         <span className="text-xs font-semibold tracking-widest text-on-tertiary-container uppercase">
                             Update
@@ -152,7 +152,7 @@ export default function NewsPage() {
                     </div>
                 </article>
 
-                <article className="col-span-12 flex flex-col justify-between rounded-[2rem] bg-primary p-8 text-on-primary md:col-span-4">
+                <article className="col-span-12 flex flex-col justify-between rounded-4xl bg-primary p-8 text-on-primary md:col-span-4">
                     <div>
                         <div className="mb-6 inline-block rounded bg-on-primary/20 p-2">
                             <span className="material-symbols-outlined text-on-primary">

@@ -43,7 +43,7 @@ export default function BlogPage() {
 
             <div className="grid grid-cols-12 gap-5">
                 <article className="group col-span-12 cursor-pointer lg:col-span-8">
-                    <div className="flex h-full flex-col overflow-hidden rounded-[2rem] border border-outline-variant/10 bg-surface-container-lowest md:flex-row">
+                    <div className="flex h-full flex-col overflow-hidden rounded-4xl border border-outline-variant/10 bg-surface-container-lowest md:flex-row">
                         <div className="h-64 overflow-hidden md:h-auto md:w-1/2">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
@@ -93,14 +93,14 @@ export default function BlogPage() {
                 </article>
 
                 <article className="group col-span-12 cursor-pointer md:col-span-6 lg:col-span-4">
-                    <div className="flex h-full flex-col rounded-[2rem] border border-outline-variant/10 bg-surface-container-lowest p-8">
+                    <div className="flex h-full flex-col rounded-4xl border border-outline-variant/10 bg-surface-container-lowest p-8">
                         <span className="mb-6 block text-xs font-semibold tracking-widest text-on-tertiary-container uppercase">
                             Regulatory
                         </span>
                         <h3 className="mb-4 text-2xl font-semibold text-primary group-hover:underline">
                             Navigating the EU AI Act: A Guide for US Payers
                         </h3>
-                        <p className="mb-8 flex-grow text-sm text-on-surface-variant">
+                        <p className="mb-8 grow text-sm text-on-surface-variant">
                             A comprehensive breakdown of compliance requirements
                             for agentic systems in global clinical markets.
                         </p>
@@ -116,14 +116,14 @@ export default function BlogPage() {
                 </article>
 
                 <article className="group col-span-12 cursor-pointer md:col-span-6 lg:col-span-4">
-                    <div className="flex h-full flex-col rounded-[2rem] border border-outline-variant/10 bg-surface-container-lowest p-8">
+                    <div className="flex h-full flex-col rounded-4xl border border-outline-variant/10 bg-surface-container-lowest p-8">
                         <span className="mb-6 block text-xs font-semibold tracking-widest text-on-tertiary-container uppercase">
                             Trends
                         </span>
                         <h3 className="mb-4 text-2xl font-semibold text-primary group-hover:underline">
                             The Shift from LLMs to LAMs in Clinical Ops
                         </h3>
-                        <p className="mb-8 flex-grow text-sm text-on-surface-variant">
+                        <p className="mb-8 grow text-sm text-on-surface-variant">
                             Why Large Action Models are the necessary evolution
                             for true healthcare autonomy in 2025.
                         </p>
@@ -138,14 +138,14 @@ export default function BlogPage() {
                     </div>
                 </article>
 
-                <article className="group relative col-span-12 cursor-pointer overflow-hidden rounded-[2rem] lg:col-span-8">
+                <article className="group relative col-span-12 cursor-pointer overflow-hidden rounded-4xl lg:col-span-8">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvq2k3iHDiC3qUU3gOxScquhHowvz1uwFC6ZKi5F5dOZnbtCiGZcMK-r0hpqN1-hiwNbnbKmgmia5tnRuXESV59G40rbXKEBdCLK4kQX0PdNKH7EgLrM44c_ELVOFwI_mpZkU2pu8uk0PQ9LvfBXwMgtsfXB9IIIHxuOYesT5Su4SVYgIwhNX3xov-_C5knIvjKyCx9iM6bWRAeF0zeXrnLnBxVhSaxda2SVXjzXCYcgIN6ZJskPO-jiGjQ4eq8tKdep_ncHRZzso"
                         alt="Abstract geometry representing data security."
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                     <div className="relative flex h-full flex-col justify-end p-10 text-white">
                         <span className="mb-4 block text-xs font-semibold tracking-widest text-white/70 uppercase">
                             Regulatory

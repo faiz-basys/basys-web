@@ -17,7 +17,7 @@ export default function ContactUsPage() {
                 </header>
 
                 <div className="grid grid-cols-1 gap-5 lg:grid-cols-12">
-                    <section className="rounded-[2rem] border border-black/10 bg-surface-container-lowest p-8 lg:col-span-7">
+                    <section className="rounded-4xl border border-black/10 bg-surface-container-lowest p-8 lg:col-span-7">
                         <div className="mb-8">
                             <h2 className="mb-2 text-2xl font-semibold text-primary">
                                 Send a Message
@@ -42,7 +42,7 @@ export default function ContactUsPage() {
                                         type="text"
                                         placeholder="Jane Doe"
                                         autoComplete="name"
-                                        className="w-full rounded-[1rem] border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
+                                        className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -58,7 +58,7 @@ export default function ContactUsPage() {
                                         type="email"
                                         placeholder="jane@organization.com"
                                         autoComplete="email"
-                                        className="w-full rounded-[1rem] border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
+                                        className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                                     />
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ export default function ContactUsPage() {
                                     name="organization"
                                     type="text"
                                     placeholder="Health System or Payer Name"
-                                    className="w-full rounded-[1rem] border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
+                                    className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -89,7 +89,7 @@ export default function ContactUsPage() {
                                     name="message"
                                     rows={5}
                                     placeholder="Tell us about your current challenges..."
-                                    className="w-full resize-none rounded-[1rem] border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
+                                    className="w-full resize-none rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                                 />
                             </div>
                             <Button
@@ -103,7 +103,7 @@ export default function ContactUsPage() {
                     </section>
 
                     <aside className="space-y-5 lg:col-span-5">
-                        <div className="flex aspect-square flex-col justify-between rounded-[2rem] bg-primary p-8 text-on-primary lg:aspect-auto">
+                        <div className="flex aspect-square flex-col justify-between rounded-4xl bg-primary p-8 text-on-primary lg:aspect-auto">
                             <div>
                                 <div className="mb-4 flex items-center gap-2">
                                     <span className="material-symbols-outlined text-on-primary">
@@ -131,7 +131,7 @@ export default function ContactUsPage() {
                         </div>
 
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-1">
-                            <div className="rounded-[2rem] border border-black/5 bg-secondary-container p-6">
+                            <div className="rounded-4xl border border-black/5 bg-secondary-container p-6">
                                 <h3 className="mb-4 text-xs font-semibold tracking-widest text-on-secondary-container uppercase">
                                     Headquarters
                                 </h3>
@@ -149,7 +149,7 @@ export default function ContactUsPage() {
                                 </div>
                             </div>
 
-                            <div className="relative h-48 overflow-hidden rounded-[2rem] border border-black/5">
+                            <div className="relative h-48 overflow-hidden rounded-4xl border border-black/5">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     alt="Map of Cambridge Massachusetts area"

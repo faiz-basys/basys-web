@@ -53,7 +53,7 @@ export default function ProviderPage() {
                 </div>
 
                 <div className="group relative">
-                    <div className="overflow-hidden rounded-[2rem] border border-outline/10 bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)]">
+                    <div className="overflow-hidden rounded-4xl border border-outline/10 bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)]">
                         <div className="flex items-center justify-between bg-primary px-6 py-4">
                             <div className="flex items-center gap-3">
                                 <div className="h-2 w-2 rounded-pill bg-green-500" />
@@ -87,7 +87,7 @@ export default function ProviderPage() {
                             </div>
 
                             <div className="space-y-3">
-                                <div className="flex items-center gap-4 rounded-[1rem] bg-surface-container-low p-3">
+                                <div className="flex items-center gap-4 rounded-2xl bg-surface-container-low p-3">
                                     <span className="material-symbols-outlined text-primary">
                                         ecg
                                     </span>
@@ -100,7 +100,7 @@ export default function ProviderPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 rounded-[1rem] border border-outline/10 p-3">
+                                <div className="flex items-center gap-4 rounded-2xl border border-outline/10 p-3">
                                     <span className="material-symbols-outlined text-primary">
                                         verified
                                     </span>
@@ -108,7 +108,7 @@ export default function ProviderPage() {
                                         Clinical Policy Alignment Verified
                                     </p>
                                 </div>
-                                <div className="flex items-center gap-4 rounded-[1rem] border border-outline/10 p-3">
+                                <div className="flex items-center gap-4 rounded-2xl border border-outline/10 p-3">
                                     <span className="material-symbols-outlined text-primary">
                                         auto_awesome
                                     </span>
@@ -136,7 +136,7 @@ export default function ProviderPage() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
-                        <article className="flex flex-col justify-between rounded-[2rem] border border-outline/5 bg-surface p-8 transition-all hover:border-outline/20 md:col-span-8">
+                        <article className="flex flex-col justify-between rounded-4xl border border-outline/5 bg-surface p-8 transition-all hover:border-outline/20 md:col-span-8">
                             <div>
                                 <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-pill bg-primary text-on-primary">
                                     <span className="material-symbols-outlined">
@@ -164,8 +164,8 @@ export default function ProviderPage() {
                             </div>
                         </article>
 
-                        <article className="flex flex-col items-center space-y-4 rounded-[2rem] border border-outline/5 bg-[#f6f4f1] p-8 text-center md:col-span-4">
-                            <div className="mb-4 h-32 w-full overflow-hidden rounded-[1rem] border border-outline/5 bg-white">
+                        <article className="flex flex-col items-center space-y-4 rounded-4xl border border-outline/5 bg-[#f6f4f1] p-8 text-center md:col-span-4">
+                            <div className="mb-4 h-32 w-full overflow-hidden rounded-2xl border border-outline/5 bg-white">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     className="h-full w-full object-cover"
@@ -182,7 +182,7 @@ export default function ProviderPage() {
                             </p>
                         </article>
 
-                        <article className="flex flex-col justify-center space-y-4 rounded-[2rem] border border-outline/5 bg-white p-8 md:col-span-4">
+                        <article className="flex flex-col justify-center space-y-4 rounded-4xl border border-outline/5 bg-white p-8 md:col-span-4">
                             <span className="material-symbols-outlined text-4xl text-primary">
                                 psychology_alt
                             </span>
@@ -195,7 +195,7 @@ export default function ProviderPage() {
                             </p>
                         </article>
 
-                        <article className="flex flex-col items-center gap-6 overflow-hidden rounded-[2rem] bg-primary p-8 text-on-primary md:col-span-8 md:flex-row">
+                        <article className="flex flex-col items-center gap-6 overflow-hidden rounded-4xl bg-primary p-8 text-on-primary md:col-span-8 md:flex-row">
                             <div className="flex-1 space-y-4">
                                 <h3 className="text-2xl font-semibold">
                                     Radical Transparency
@@ -221,7 +221,7 @@ export default function ProviderPage() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="w-full rounded-[1rem] border border-on-primary/10 bg-on-primary/10 p-4 backdrop-blur-sm md:w-1/3">
+                            <div className="w-full rounded-2xl border border-on-primary/10 bg-on-primary/10 p-4 backdrop-blur-sm md:w-1/3">
                                 <div className="text-[48px] leading-none font-black tracking-tight">
                                     85%
                                 </div>
@@ -234,7 +234,7 @@ export default function ProviderPage() {
                         {providerFeatures.map((feature) => (
                             <article
                                 key={feature.title}
-                                className="rounded-[2rem] border border-outline/10 bg-white p-6 md:col-span-4"
+                                className="rounded-4xl border border-outline/10 bg-white p-6 md:col-span-4"
                             >
                                 <span className="material-symbols-outlined mb-4 text-primary">
                                     {feature.icon}
@@ -252,7 +252,7 @@ export default function ProviderPage() {
             </section>
 
             <section className="mx-auto max-w-5xl px-8 py-24">
-                <div className="flex flex-col items-center gap-8 rounded-[2rem] border border-outline/10 bg-white p-8 md:flex-row">
+                <div className="flex flex-col items-center gap-8 rounded-4xl border border-outline/10 bg-white p-8 md:flex-row">
                     <div className="flex-1 space-y-4">
                         <h2 className="text-3xl font-semibold text-primary">
                             The New Standard of Care Speed
@@ -264,7 +264,7 @@ export default function ProviderPage() {
                             physician satisfaction.
                         </p>
                         <div className="grid grid-cols-2 gap-4 pt-2">
-                            <div className="rounded-[1rem] bg-surface-container-low p-4">
+                            <div className="rounded-2xl bg-surface-container-low p-4">
                                 <p className="text-xs text-on-surface-variant uppercase">
                                     Traditional
                                 </p>
@@ -272,7 +272,7 @@ export default function ProviderPage() {
                                     7-14 Days
                                 </p>
                             </div>
-                            <div className="rounded-[1rem] bg-primary p-4 text-on-primary">
+                            <div className="rounded-2xl bg-primary p-4 text-on-primary">
                                 <p className="text-xs opacity-60 uppercase">
                                     With basys.ai
                                 </p>
@@ -281,7 +281,7 @@ export default function ProviderPage() {
                         </div>
                     </div>
 
-                    <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-[2rem] border border-outline/5 bg-surface-container md:w-1/3">
+                    <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-4xl border border-outline/5 bg-surface-container md:w-1/3">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             className="h-full w-full object-cover"

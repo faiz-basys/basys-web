@@ -22,7 +22,7 @@ export default function AboutUsPage() {
                     </div>
 
                     <div className="relative lg:col-span-5">
-                        <div className="h-[400px] overflow-hidden rounded-[2rem] bg-surface-container">
+                        <div className="h-[400px] overflow-hidden rounded-4xl bg-surface-container">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 className="h-full w-full object-cover opacity-90 grayscale contrast-125"
@@ -36,7 +36,7 @@ export default function AboutUsPage() {
 
             <section className="mx-auto max-w-7xl px-8 py-8 md:py-16">
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                    <article className="flex min-h-[320px] flex-col justify-between rounded-[2rem] border border-black/10 bg-white p-8 md:col-span-2">
+                    <article className="flex min-h-[320px] flex-col justify-between rounded-4xl border border-black/10 bg-white p-8 md:col-span-2">
                         <div>
                             <h2 className="mb-4 text-3xl font-semibold text-primary">
                                 Cambridge Roots
@@ -63,7 +63,7 @@ export default function AboutUsPage() {
                         </div>
                     </article>
 
-                    <article className="flex flex-col justify-center rounded-[2rem] bg-primary p-8 text-center text-on-primary">
+                    <article className="flex flex-col justify-center rounded-4xl bg-primary p-8 text-center text-on-primary">
                         <span className="material-symbols-outlined mb-4 text-4xl">
                             verified_user
                         </span>
@@ -89,8 +89,8 @@ export default function AboutUsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                    <article className="group overflow-hidden rounded-[2rem] border border-black/10 bg-white">
-                        <div className="aspect-[4/3] overflow-hidden bg-surface-container">
+                    <article className="group overflow-hidden rounded-4xl border border-black/10 bg-white">
+                        <div className="aspect-4/3 overflow-hidden bg-surface-container">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 className="h-full w-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
@@ -121,8 +121,8 @@ export default function AboutUsPage() {
                         </div>
                     </article>
 
-                    <article className="group overflow-hidden rounded-[2rem] border border-black/10 bg-[#f6f4f1]">
-                        <div className="aspect-[4/3] overflow-hidden bg-surface-container">
+                    <article className="group overflow-hidden rounded-4xl border border-black/10 bg-[#f6f4f1]">
+                        <div className="aspect-4/3 overflow-hidden bg-surface-container">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 className="h-full w-full object-cover grayscale transition-transform duration-500 group-hover:scale-105"
@@ -156,7 +156,7 @@ export default function AboutUsPage() {
             </section>
 
             <section className="mx-auto mb-8 max-w-7xl px-8 py-8 md:mb-16 md:py-16">
-                <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-white">
+                <div className="overflow-hidden rounded-4xl border border-black/10 bg-white">
                     <div className="flex items-center justify-between bg-primary px-6 py-4">
                         <div className="flex items-center gap-4">
                             <div className="h-2 w-2 animate-pulse rounded-pill bg-green-500" />

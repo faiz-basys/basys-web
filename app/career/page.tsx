@@ -67,11 +67,11 @@ export default function CareerPage() {
                 </div>
 
                 <div className="group relative">
-                    <div className="absolute -inset-4 rounded-[3rem] bg-gradient-to-tr from-surface-container-high to-transparent opacity-50 blur-2xl" />
+                    <div className="absolute -inset-4 rounded-[3rem] bg-linear-to-tr from-surface-container-high to-transparent opacity-50 blur-2xl" />
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                         alt="Our Team"
-                        className="relative aspect-[4/3] w-full rounded-[2rem] border border-outline/10 object-cover shadow-sm"
+                        className="relative aspect-4/3 w-full rounded-4xl border border-outline/10 object-cover shadow-sm"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb6J_JQ6MXzXR3XoOL4XXIAFVuBj0KQ6JEIgP3rI9YOhtTNlx1G2n8wxIUWkueDK3YZV7DWwSfAf890IK5WZS0vrH-Qr6poqQbmJviZlS8QzO-OUMRBGYAxT_txtvsIpUIbhe29XUoIhec62Jsm-DsAoE5E2ZYo1bfRKwpdhwwQG4JBfEgw0zY6piD6YOTITuz5RINwAyKTNQR4Y7nLSaCzs1MaLnGztZ2j5OWWxlGOyYyqs29F7JV6WxN_xwtTSHCZ-u02vQzHuk"
                     />
                 </div>
@@ -82,7 +82,7 @@ export default function CareerPage() {
                     Why basys.ai?
                 </h2>
                 <div className="grid h-auto grid-cols-1 gap-5 md:h-[600px] md:grid-cols-4">
-                    <article className="flex flex-col justify-between rounded-[2rem] border border-outline/10 bg-surface-container-lowest p-8 md:col-span-2 md:row-span-2">
+                    <article className="flex flex-col justify-between rounded-4xl border border-outline/10 bg-surface-container-lowest p-8 md:col-span-2 md:row-span-2">
                         <div>
                             <span className="material-symbols-outlined mb-4 text-primary">
                                 clinical_notes
@@ -100,12 +100,12 @@ export default function CareerPage() {
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                             alt="Clinical Tech"
-                            className="mt-6 h-48 w-full rounded-[1rem] object-cover"
+                            className="mt-6 h-48 w-full rounded-2xl object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQYQtgW-smL_vVLhz4OgBbWEuhVGY3rt10Fmh-_GtRDnONV1QIyRJVATxvMzvVUEYOgyFTzjapY94AzfIm_4qcL2D8QyYUtmq1LcyIwN_Lia9Xj9LWEZBir426yFMrqF5e9LpIi8YimYIfRUKGa09xbvAM1WiRzholUSL3pC1Ml88qrBmeJYE8lcq4jXZtoyOGdvZZlL33_R0VDh66cHft03foAJAkf0jfwqYksANoj-ID3WBNmY1nJrCejeOmC2Wc9ifx70V9gHk"
                         />
                     </article>
 
-                    <article className="flex flex-col justify-center rounded-[2rem] bg-primary p-8 text-on-primary md:col-span-2">
+                    <article className="flex flex-col justify-center rounded-4xl bg-primary p-8 text-on-primary md:col-span-2">
                         <h3 className="mb-4 text-2xl font-semibold text-white">
                             Autonomous Growth
                         </h3>
@@ -116,7 +116,7 @@ export default function CareerPage() {
                         </p>
                     </article>
 
-                    <article className="flex flex-col items-center justify-center rounded-[2rem] bg-secondary-container p-8 text-center md:col-span-1">
+                    <article className="flex flex-col items-center justify-center rounded-4xl bg-secondary-container p-8 text-center md:col-span-1">
                         <span className="material-symbols-outlined mb-4 text-3xl">
                             public
                         </span>
@@ -128,7 +128,7 @@ export default function CareerPage() {
                         </p>
                     </article>
 
-                    <article className="flex flex-col items-center justify-center rounded-[2rem] bg-surface-container-highest p-8 text-center md:col-span-1">
+                    <article className="flex flex-col items-center justify-center rounded-4xl bg-surface-container-highest p-8 text-center md:col-span-1">
                         <span className="material-symbols-outlined mb-4 text-3xl">
                             payments
                         </span>
@@ -170,7 +170,7 @@ export default function CareerPage() {
                     {jobRoles.map((role) => (
                         <article
                             key={role.title}
-                            className="group flex flex-col items-start justify-between rounded-[2rem] border border-outline/5 bg-surface-container-low p-6 transition-all hover:bg-white md:flex-row md:items-center"
+                            className="group flex flex-col items-start justify-between rounded-4xl border border-outline/5 bg-surface-container-low p-6 transition-all hover:bg-white md:flex-row md:items-center"
                         >
                             <div className="flex items-center gap-6">
                                 <div
@@ -229,7 +229,7 @@ export default function CareerPage() {
                 </div>
             </section>
 
-            <section className="relative overflow-hidden rounded-[2rem] bg-secondary-container p-8 text-center md:p-32">
+            <section className="relative overflow-hidden rounded-4xl bg-secondary-container p-8 text-center md:p-32">
                 <div className="absolute -top-32 -right-32 h-64 w-64 rounded-pill bg-primary opacity-5" />
                 <div className="absolute -bottom-32 -left-32 h-64 w-64 rounded-pill bg-primary opacity-5" />
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6">
@@ -244,7 +244,7 @@ export default function CareerPage() {
                         <input
                             type="email"
                             placeholder="Email Address"
-                            className="flex-grow rounded-pill border-none px-6 py-3 text-sm focus:ring-2 focus:ring-primary"
+                            className="grow rounded-pill border-none px-6 py-3 text-sm focus:ring-2 focus:ring-primary"
                         />
                         <Button className="px-8 py-3 uppercase">
                             Subscribe

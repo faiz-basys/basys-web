@@ -64,7 +64,7 @@ export default function TechnologyPage() {
                     </div>
 
                     <div className="relative">
-                        <div className="aspect-square overflow-hidden rounded-[2rem] border border-outline-variant bg-surface-container-highest">
+                        <div className="aspect-square overflow-hidden rounded-4xl border border-outline-variant bg-surface-container-highest">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 className="h-full w-full object-cover opacity-80 mix-blend-multiply"
@@ -89,9 +89,9 @@ export default function TechnologyPage() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
-                        <article className="flex flex-col justify-between rounded-[2rem] border border-outline-variant bg-surface-container-lowest p-8 md:col-span-8">
+                        <article className="flex flex-col justify-between rounded-4xl border border-outline-variant bg-surface-container-lowest p-8 md:col-span-8">
                             <div>
-                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-[1rem] bg-primary">
+                                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary">
                                     <span className="material-symbols-outlined text-on-primary">
                                         hub
                                     </span>
@@ -122,7 +122,7 @@ export default function TechnologyPage() {
                             </div>
                         </article>
 
-                        <article className="flex flex-col rounded-[2rem] bg-primary p-8 text-on-primary md:col-span-4">
+                        <article className="flex flex-col rounded-4xl bg-primary p-8 text-on-primary md:col-span-4">
                             <div className="mb-8">
                                 <span
                                     className="material-symbols-outlined text-4xl"
@@ -158,7 +158,7 @@ export default function TechnologyPage() {
                             </ul>
                         </article>
 
-                        <article className="rounded-[2rem] border border-outline-variant bg-secondary-container p-8 md:col-span-12">
+                        <article className="rounded-4xl border border-outline-variant bg-secondary-container p-8 md:col-span-12">
                             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                                 <div>
                                     <h3 className="mb-4 text-2xl font-semibold">
@@ -177,7 +177,7 @@ export default function TechnologyPage() {
                                     <Button>View Sample Path</Button>
                                 </div>
 
-                                <div className="overflow-hidden rounded-[1rem] border border-outline-variant bg-surface-container-lowest p-4 font-mono text-[11px] text-on-surface">
+                                <div className="overflow-hidden rounded-2xl border border-outline-variant bg-surface-container-lowest p-4 font-mono text-[11px] text-on-surface">
                                     <div className="mb-2 flex justify-between border-b border-surface-variant pb-2 font-bold text-on-surface-variant">
                                         <span>
                                             AGENT_TRACE: DIAGNOSIS_VALIDATOR
@@ -241,7 +241,7 @@ export default function TechnologyPage() {
                     </p>
                 </div>
 
-                <div className="overflow-hidden rounded-[2rem] border border-outline-variant bg-surface-container">
+                <div className="overflow-hidden rounded-4xl border border-outline-variant bg-surface-container">
                     <div className="flex items-center justify-between bg-primary px-6 py-4">
                         <div className="flex items-center gap-4">
                             <div className="flex gap-2">
@@ -264,7 +264,7 @@ export default function TechnologyPage() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-3">
-                        <article className="rounded-[1rem] border border-outline-variant bg-surface-container-lowest p-4">
+                        <article className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-4">
                             <div className="mb-4 flex items-center justify-between">
                                 <span className="text-xs font-semibold tracking-wider text-primary">
                                     INTAKE AGENT
@@ -282,7 +282,7 @@ export default function TechnologyPage() {
                             </div>
                         </article>
 
-                        <article className="rounded-[1rem] border border-outline-variant bg-surface-container-lowest p-4">
+                        <article className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-4">
                             <div className="mb-4 flex items-center justify-between">
                                 <span className="text-xs font-semibold tracking-wider text-primary">
                                     REASONING ENGINE
@@ -300,7 +300,7 @@ export default function TechnologyPage() {
                             </div>
                         </article>
 
-                        <article className="rounded-[1rem] border border-outline-variant bg-surface-container-lowest p-4">
+                        <article className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-4">
                             <div className="mb-4 flex items-center justify-between">
                                 <span className="text-xs font-semibold tracking-wider text-primary">
                                     AUDIT COMPLIANCE
@@ -319,7 +319,7 @@ export default function TechnologyPage() {
                     </div>
 
                     <div className="px-6 pb-6">
-                        <div className="flex min-h-[300px] items-center justify-center rounded-[1rem] border border-outline-variant bg-white/50 p-8">
+                        <div className="flex min-h-[300px] items-center justify-center rounded-2xl border border-outline-variant bg-white/50 p-8">
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 className="h-auto w-full max-w-2xl rounded opacity-90"
@@ -378,7 +378,7 @@ export default function TechnologyPage() {
                     </div>
 
                     <div className="relative h-[400px]">
-                        <div className="absolute inset-0 flex items-center justify-center rounded-[2rem] border border-white/10 bg-white/5 p-8">
+                        <div className="absolute inset-0 flex items-center justify-center rounded-4xl border border-white/10 bg-white/5 p-8">
                             <div className="relative flex h-full w-full items-center justify-center rounded-full border-2 border-dashed border-white/20">
                                 <div className="flex h-3/4 w-3/4 items-center justify-center rounded-full border-2 border-white/40">
                                     <div className="flex h-1/2 w-1/2 items-center justify-center rounded-full bg-white text-primary">
@@ -413,7 +413,7 @@ export default function TechnologyPage() {
                         {systemSpecs.map((spec) => (
                             <article
                                 key={spec.title}
-                                className="rounded-[2rem] border border-outline-variant p-6"
+                                className="rounded-4xl border border-outline-variant p-6"
                             >
                                 <h4 className="mb-2 text-xs font-semibold tracking-wider text-primary">
                                     {spec.title}
