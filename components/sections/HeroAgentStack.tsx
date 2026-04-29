@@ -84,7 +84,7 @@ function AgentEqBars({
     );
 }
 
-/** Activity meter + determinate 0→100% bar — all stack states */
+/** Activity meter + determinate 0→100% bar - all stack states */
 function CardPipelineStrip({
     variant,
     progress,
@@ -245,7 +245,7 @@ function useLiveProcessingProgress(
     reducedMotion: boolean,
     /**
      * While the front stack slot is hidden (flyout + pause before reorder), do not
-     * advance the timer — otherwise ~1.4s elapses before the new front is visible and
+     * advance the timer - otherwise ~1.4s elapses before the new front is visible and
      * the bar jumps to ~25–40%.
      */
     frontSlotHiddenForHandoff: boolean,
@@ -299,7 +299,7 @@ function useLiveProcessingProgress(
     return progress;
 }
 
-/** Snapshot card that exited — animates down via CSS, unmount when done (never rejoins front slot here) */
+/** Snapshot card that exited - animates down via CSS, unmount when done (never rejoins front slot here) */
 function ExitFlyoutCard({
     authCase,
     onAnimationEnd,
@@ -615,7 +615,7 @@ export function HeroAgentStack() {
         reducedMotion,
         hiddenFrontCaseIndex != null,
     );
-    /** True while flyout runs — rear stack slot hidden so the same case is not shown twice */
+    /** True while flyout runs - rear stack slot hidden so the same case is not shown twice */
     const [hideBackSlot, setHideBackSlot] = useState(false);
     const [newBackPop, setNewBackPop] = useState(false);
     const [snapTransforms, setSnapTransforms] = useState(false);

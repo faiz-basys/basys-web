@@ -137,7 +137,7 @@ export default function TechnologyPage() {
                             Our Commitment to Healthcare Excellence
                         </h2>
                         <p className="mt-3 text-sm text-on-surface-variant">
-                            Secure, connected, and understandable by design — so
+                            Secure, connected, and understandable by design - so
                             you can deploy AI where clinical risk is highest.
                         </p>
                     </div>
@@ -193,7 +193,7 @@ export default function TechnologyPage() {
                                 integration and explainable outputs, the
                                 platform is designed so security,
                                 interoperability, and trust reinforce each other
-                                — not trade off.
+                                - not trade off.
                             </p>
                         </div>
                         <ul className="space-y-4 text-sm text-on-primary/85">
@@ -239,7 +239,7 @@ export default function TechnologyPage() {
                                         Full transparency:
                                     </strong>{" "}
                                     reasoning and evidence clinicians can review
-                                    — no black-box automation.
+                                    - no black-box automation.
                                 </span>
                             </li>
                         </ul>

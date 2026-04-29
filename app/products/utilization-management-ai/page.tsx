@@ -8,13 +8,13 @@ const capabilities = [
         icon: "pending_actions",
         title: "Concurrent review automation",
         description:
-            "AI-assisted queues that surface evolving clinical context during an episode—highlighting pathway deviations, escalation candidates, and documentation gaps before they drive unnecessary denials or delays.",
+            "AI-assisted queues that surface evolving clinical context during an episode-highlighting pathway deviations, escalation candidates, and documentation gaps before they drive unnecessary denials or delays.",
     },
     {
         icon: "outbound",
         title: "Discharge planning assistance",
         description:
-            "Surfaces barriers to discharge, disposition readiness, and follow-up gaps so case managers can align next steps with benefit design, medical policy, and patient safety—without replacing clinician judgment.",
+            "Surfaces barriers to discharge, disposition readiness, and follow-up gaps so case managers can align next steps with benefit design, medical policy, and patient safety-without replacing clinician judgment.",
     },
     {
         icon: "timelapse",
@@ -56,7 +56,7 @@ export default function UtilizationManagementAiProductPage() {
                         </h1>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
                             AI-assisted concurrent and retrospective UM for
-                            plans and partners—clinical context plus policy,
+                            plans and partners-clinical context plus policy,
                             explainable outputs, and integrations fit for
                             enterprise UM, appeals, and human-owned
                             determinations.
@@ -96,7 +96,7 @@ export default function UtilizationManagementAiProductPage() {
                         <p className="text-sm text-on-surface-variant">
                             Focus areas for concurrent stewardship, discharge
                             readiness, stay efficiency, and retrospective
-                            assurance—aligned to how UM teams actually operate.
+                            assurance-aligned to how UM teams actually operate.
                         </p>
                     </div>
 
@@ -130,7 +130,7 @@ export default function UtilizationManagementAiProductPage() {
                     </h2>
                     <p className="max-w-3xl text-base leading-relaxed text-on-surface-variant">
                         Health plan utilization management, concurrent review,
-                        and care management leaders—plus hospital partners where
+                        and care management leaders-plus hospital partners where
                         joint operating models apply. Best suited to
                         organizations that want AI to compress review cycle time
                         and improve consistency while keeping physicians and UM

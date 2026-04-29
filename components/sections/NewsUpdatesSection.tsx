@@ -43,7 +43,7 @@ export type NewsUpdateItem = {
     company: string;
 };
 
-/** Edit this list to add or change news items (content only — no HTML). */
+/** Edit this list to add or change news items (content only - no HTML). */
 export const NEWS_UPDATES_ITEMS: NewsUpdateItem[] = [
     {
         category: "News & Achievement",
@@ -110,7 +110,7 @@ export const NEWS_UPDATES_ITEMS: NewsUpdateItem[] = [
     },
     {
         category: "Forbes Feature",
-        title: "Thought leadership on healthcare AI — Forbes x basys.ai",
+        title: "Thought leadership on healthcare AI - Forbes x basys.ai",
         href: "https://www.forbes.com/councils/forbesbusinesscouncil/2025/01/14/healthcare-trends-shaping-2025-and-insights-for-industry-leaders/",
         linkLabel: "Read More",
         imageSrc:

@@ -64,7 +64,7 @@ export function PayerPaPipelineCard() {
 
                 <div className="relative bg-linear-to-b from-surface-container-lowest to-surface-container-low/80 p-4 sm:p-6">
                     <p className="mb-4 text-center text-[11px] text-on-surface-variant sm:text-xs">
-                        PA requests flow into the basys engine — matched to
+                        PA requests flow into the basys engine - matched to
                         charts, policy, and evidence in real time.
                     </p>
 

@@ -18,7 +18,7 @@ const products = [
         icon: "rate_review",
         title: "Medical Record Review",
         description:
-            "AI-assisted chart review for payers and partners—structured validation, ICD-10 aware coding, HCC-aligned insights, and audit-ready workflows from cover letters and PDFs.",
+            "AI-assisted chart review for payers and partners-structured validation, ICD-10 aware coding, HCC-aligned insights, and audit-ready workflows from cover letters and PDFs.",
         ctaLabel: "LEARN MORE",
         tone: "dark" as const,
         href: "/products/medical-record-review",
@@ -63,7 +63,7 @@ export default function ProductsPage() {
                     Modular AI Solutions for Healthcare Infrastructure.
                 </h1>
                 <p className="mx-auto mb-10 max-w-2xl text-lg text-secondary">
-                    Modular agents and engines for clinical workflows—built for
+                    Modular agents and engines for clinical workflows-built for
                     regulated, high-stakes enterprise deployments.
                 </p>
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">

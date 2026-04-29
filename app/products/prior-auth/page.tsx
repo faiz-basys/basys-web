@@ -61,7 +61,7 @@ export default function PriorAuthProductPage() {
                         </h1>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
                             Full-stack prior auth from intake through
-                            outcome—payers, providers, and policy in one place,
+                            outcome-payers, providers, and policy in one place,
                             with secure documents, clinical and EHR/FHIR
                             context, configurable AI where you need it, and
                             enterprise-grade auth and operations at scale.

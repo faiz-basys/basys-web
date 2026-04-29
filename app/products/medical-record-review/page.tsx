@@ -55,9 +55,10 @@ export default function MedicalRecordReviewProductPage() {
                         </h1>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
                             Secure MRR for plans and partners: OCR, AI
-                            validation against cover sheets, ICD-10 and HCC-oriented
-                            extraction, in-browser PDF review, and enterprise
-                            roles—with an audit trail for regulated operations.
+                            validation against cover sheets, ICD-10 and
+                            HCC-oriented extraction, in-browser PDF review, and
+                            enterprise roles-with an audit trail for regulated
+                            operations.
                         </p>
 
                         <div className="flex flex-wrap gap-4">

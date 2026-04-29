@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/** Full pool of resources; only 3 rows visible — they rotate as items sync */
+/** Full pool of resources; only 3 rows visible - they rotate as items sync */
 export const EHR_RESOURCE_POOL = [
     { id: "prob", label: "Problems · ICD-10" },
     { id: "rx", label: "Medications · RxNorm" },
@@ -21,7 +21,7 @@ export const EHR_RESOURCE_POOL = [
 const PULL_MS = 2800;
 const SHIFT_AFTER_SYNC_MS = 750;
 
-/** One row block + gap-0.5 — must match row `h-[22px]` + `gap-0.5` below */
+/** One row block + gap-0.5 - must match row `h-[22px]` + `gap-0.5` below */
 const ROW_H = 22;
 const ROW_GAP = 2;
 const ROW_STEP = ROW_H + ROW_GAP;

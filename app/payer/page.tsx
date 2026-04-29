@@ -61,12 +61,12 @@ const payerSuccessItems = [
     {
         title: "Trust",
         description:
-            "Boost provider confidence with consistent, criteria-based decisions — building stronger relationships through transparency and predictability.",
+            "Boost provider confidence with consistent, criteria-based decisions - building stronger relationships through transparency and predictability.",
     },
     {
         title: "Efficiency",
         description:
-            "Reduce turnaround times and manual reviews with intelligent workflows — freeing up teams to focus on high-value clinical work.",
+            "Reduce turnaround times and manual reviews with intelligent workflows - freeing up teams to focus on high-value clinical work.",
     },
     {
         title: "Member Experience",

@@ -107,7 +107,7 @@ spacing:
 
 ## Brand & Style
 
-This design system targets high-stakes enterprise environments where Agentic AI must feel both autonomous and strictly governed. The brand personality is one of "Invisible Strength"—highly capable, data-driven, and calm under pressure.
+This design system targets high-stakes enterprise environments where Agentic AI must feel both autonomous and strictly governed. The brand personality is one of "Invisible Strength"-highly capable, data-driven, and calm under pressure.
 
 The aesthetic follows a **Corporate / Modern** movement with a shift toward **Monochromatic Minimalism**. It prioritizes extreme clarity and information density. Visual interest is generated through high-contrast structural elements and a sophisticated, neutral palette rather than vibrant colors. The goal is to evoke a sense of absolute reliability, technical authority, and architectural precision.
 
@@ -127,7 +127,7 @@ Headlines use tighter letter-spacing and heavier weights to command authority. B
 
 The layout employs a **Fixed Grid** system for administrative consoles and a **Fluid Grid** for live monitoring dashboards. A 12-column structure is the standard, allowing for modular "agent widgets" to span 3, 4, 6, or 12 columns.
 
-The spacing rhythm is based on a 4px baseline, ensuring all components align to a mathematical grid. This precision reinforces the "agentic" nature of the product—everything is calculated and intentional. Gutters are kept narrow (20px) to maximize screen real estate for data-heavy views.
+The spacing rhythm is based on a 4px baseline, ensuring all components align to a mathematical grid. This precision reinforces the "agentic" nature of the product-everything is calculated and intentional. Gutters are kept narrow (20px) to maximize screen real estate for data-heavy views.
 
 ## Elevation & Depth
 

@@ -8,7 +8,7 @@ const capabilities = [
         icon: "hub",
         title: "Intelligent pattern detection",
         description:
-            "Surfaces anomalous billing sequences, frequency outliers, and clinically inconsistent treatment paths across claims and authorization contexts—prioritized for investigator review rather than silent auto-action.",
+            "Surfaces anomalous billing sequences, frequency outliers, and clinically inconsistent treatment paths across claims and authorization contexts-prioritized for investigator review rather than silent auto-action.",
     },
     {
         icon: "speed",
@@ -20,13 +20,13 @@ const capabilities = [
         icon: "gavel",
         title: "Policy-aware analysis",
         description:
-            "Cross-checks activity against benefit rules, coverage criteria, and policy constructs your organization maintains—so alerts reflect how your plan defines abuse versus aggressive but permitted utilization.",
+            "Cross-checks activity against benefit rules, coverage criteria, and policy constructs your organization maintains-so alerts reflect how your plan defines abuse versus aggressive but permitted utilization.",
     },
     {
         icon: "lightbulb",
         title: "Automated insights & explanations",
         description:
-            "Digestible rationales and feature attributions suitable for triage meetings, escalations, and documentation—not a black box score tied only to a numeric threshold.",
+            "Digestible rationales and feature attributions suitable for triage meetings, escalations, and documentation-not a black box score tied only to a numeric threshold.",
     },
 ];
 
@@ -50,7 +50,7 @@ export default function FwaDetectionProductPage() {
                         </h1>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
                             Real-time surveillance across claims and prior
-                            auth—pattern detection, refreshed risk signals, and
+                            auth-pattern detection, refreshed risk signals, and
                             policy-aware rationales for SIU and payment
                             integrity, feeding case workflows with configurable
                             sensitivity and human sign-off where it matters.

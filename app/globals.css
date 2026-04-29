@@ -36,7 +36,7 @@ body {
   vertical-align: middle;
 }
 
-/* Hero section — AI SaaS motion (respects reduced motion) */
+/* Hero section - AI SaaS motion (respects reduced motion) */
 @keyframes hero-fade-up {
   from {
     opacity: 0;
@@ -150,7 +150,7 @@ body {
   }
 }
 
-/* Hero stack — agent inference UI (EQ bars; step fill driven in React from progress) */
+/* Hero stack - agent inference UI (EQ bars; step fill driven in React from progress) */
 @keyframes agent-eq-bar {
   0%,
   100% {
@@ -172,7 +172,7 @@ body {
   }
 }
 
-/* EHR sync feed — list-only refresh (no vertical slide; avoids header jump) */
+/* EHR sync feed - list-only refresh (no vertical slide; avoids header jump) */
 @keyframes ehr-feed-shift {
   from {
     opacity: 0.65;
@@ -213,7 +213,7 @@ body {
   }
 }
 
-/* News section — 4th card reveal on scroll into view */
+/* News section - 4th card reveal on scroll into view */
 @keyframes news-updates-fourth-reveal {
   from {
     opacity: 0;
