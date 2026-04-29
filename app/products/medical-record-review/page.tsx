@@ -53,27 +53,11 @@ export default function MedicalRecordReviewProductPage() {
                         <h1 className="max-w-xl text-5xl leading-tight font-bold text-primary">
                             Medical Record Review
                         </h1>
-                        <p className="max-w-xl text-lg font-medium leading-relaxed text-on-surface">
-                            AI-assisted medical record review for payers and
-                            partners—turns cover letters and chart PDFs into
-                            structured validation, ICD-10–aware coding support,
-                            and risk-adjustment–aligned insights so teams can
-                            review faster with a clear audit trail.
-                        </p>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
-                            Basys Medical Record Review (MRR) is a secure web
-                            application for health plans and clinical partners.
-                            Users upload a cover letter and medical record; the
-                            system runs OCR, then AI-driven validation and
-                            diagnosis extraction aligned with RADV-style and
-                            CMS-HCC (v24 / v28) thinking—including ICD-10
-                            candidates, HCC mapping, and RAF scoring support.
-                            Payer and provider roles (via Keycloak) can track
-                            status, open in-browser PDF review, switch list and
-                            table views, and (for administrators) assign and
-                            manage reviews. HIPAA-oriented file handling, soft
-                            delete, and enterprise authentication support
-                            regulated operations.
+                            Secure MRR for plans and partners: OCR, AI
+                            validation against cover sheets, ICD-10 and HCC-oriented
+                            extraction, in-browser PDF review, and enterprise
+                            roles—with an audit trail for regulated operations.
                         </p>
 
                         <div className="flex flex-wrap gap-4">

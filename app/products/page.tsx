@@ -63,8 +63,8 @@ export default function ProductsPage() {
                     Modular AI Solutions for Healthcare Infrastructure.
                 </h1>
                 <p className="mx-auto mb-10 max-w-2xl text-lg text-secondary">
-                    Precision-built agents and engines to automate clinical
-                    workflows, designed for high-stakes enterprise environments.
+                    Modular agents and engines for clinical workflows—built for
+                    regulated, high-stakes enterprise deployments.
                 </p>
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <Button size="lg" className="w-full sm:w-auto">

@@ -54,30 +54,12 @@ export default function UtilizationManagementAiProductPage() {
                         <h1 className="max-w-xl text-5xl leading-tight font-bold text-primary">
                             Utilization Management AI
                         </h1>
-                        <p className="max-w-xl text-lg font-medium leading-relaxed text-on-surface">
-                            Streamline concurrent and retrospective review with
-                            AI that understands clinical context, reducing
-                            unnecessary admissions and denials.
-                        </p>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
-                            Basys Utilization Management AI is built for health
-                            plans, delegated UM organizations, and provider
-                            partners that need to scale medical necessity and
-                            stay management without drowning reviewers in
-                            repetitive chart pulls. It complements rules and
-                            policy engines by interpreting narrative and
-                            structured chart signals—so concurrent decisions and
-                            retrospective audits share a consistent view of the
-                            episode, with human reviewers staying in control of
-                            final determinations.
-                        </p>
-                        <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
-                            Deployment assumes enterprise-grade expectations:
-                            integration paths for clinical and administrative
-                            feeds, separation of duties across UM and appeals
-                            teams, and outputs designed for documentation,
-                            training, and regulatory dialogue—not opaque scores
-                            alone.
+                            AI-assisted concurrent and retrospective UM for
+                            plans and partners—clinical context plus policy,
+                            explainable outputs, and integrations fit for
+                            enterprise UM, appeals, and human-owned
+                            determinations.
                         </p>
 
                         <div className="flex flex-wrap gap-4">

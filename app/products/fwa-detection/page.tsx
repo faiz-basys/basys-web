@@ -48,24 +48,12 @@ export default function FwaDetectionProductPage() {
                         <h1 className="max-w-xl text-4xl leading-tight font-bold text-primary sm:text-5xl">
                             AI-Powered Fraud, Waste &amp; Abuse (FWA) Detection
                         </h1>
-                        <p className="max-w-xl text-lg font-medium leading-relaxed text-on-surface">
-                            Basys.ai&apos;s FWA solution leverages advanced AI
-                            to proactively identify potential fraud, waste, and
-                            abuse in healthcare claims and prior authorization
-                            workflows. By analyzing patient data, policy
-                            criteria, and treatment patterns in real time, the
-                            system helps payers and providers reduce risk,
-                            improve compliance, and make faster, more accurate
-                            decisions.
-                        </p>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
-                            Built for payment integrity, special investigation
-                            units, and compliance partners who need scalable
-                            surveillance without drowning analysts in false
-                            positives. Outputs are designed to feed existing
-                            case management and appeals processes—with
-                            configurable sensitivity, policy versioning, and
-                            human sign-off on consequential actions.
+                            Real-time surveillance across claims and prior
+                            auth—pattern detection, refreshed risk signals, and
+                            policy-aware rationales for SIU and payment
+                            integrity, feeding case workflows with configurable
+                            sensitivity and human sign-off where it matters.
                         </p>
 
                         <div className="flex flex-wrap gap-4">

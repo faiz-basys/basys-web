@@ -39,12 +39,6 @@ const capabilities = [
         description:
             "Keycloak-oriented auth, JWT-backed APIs, document storage (for example S3), presigned URLs, and separation of web and API deployments for controlled rollouts.",
     },
-    {
-        icon: "extension",
-        title: "Extensibility",
-        description:
-            "Third-party and iframe patterns for embedding or integrating external experiences; LLM completion and prompt modules where you define how automation assists humans.",
-    },
 ];
 
 export default function PriorAuthProductPage() {
@@ -65,27 +59,12 @@ export default function PriorAuthProductPage() {
                         <h1 className="max-w-xl text-5xl leading-tight font-bold text-primary">
                             Prior Authorization Platform
                         </h1>
-                        <p className="max-w-lg text-lg font-medium text-on-surface">
-                            End-to-end workflows for payers and providers, from
-                            clinical context and policy intelligence to
-                            decisions and documentation.
-                        </p>
                         <p className="max-w-xl text-lg leading-relaxed text-on-surface-variant">
-                            Basys Prior Authorization is a full-stack platform
-                            that helps healthcare organizations manage prior
-                            authorization from intake through review and
-                            outcome. It connects payers, providers, patients,
-                            and policies in one system, with secure document
-                            handling, clinical and administrative context
-                            (including EHR/FHIR-oriented capabilities), and
-                            optional AI/LLM-assisted steps where your prompts
-                            and workflows are configured. The product is built
-                            as a modern web application plus API, designed for
-                            enterprise use with strong authentication,
-                            organizational boundaries, and operational features
-                            such as bulk requests, medical record review, and
-                            claims-related review capabilities alongside core PA
-                            request lifecycle management.
+                            Full-stack prior auth from intake through
+                            outcome—payers, providers, and policy in one place,
+                            with secure documents, clinical and EHR/FHIR
+                            context, configurable AI where you need it, and
+                            enterprise-grade auth and operations at scale.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
