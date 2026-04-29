@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const footerLinks = [
@@ -53,8 +54,15 @@ export function Footer() {
         <footer className="border-t border-slate-200 bg-slate-50">
             <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-end gap-8 px-8 py-12 md:grid-cols-2">
                 <div className="space-y-6">
-                    <div className="text-lg font-bold uppercase tracking-tight text-slate-950">
-                        basys.ai
+                    <div className="mb-6">
+                        <Link href="/">
+                            <Image
+                                src="/logo.png"
+                                alt="Basys Logo"
+                                width={100}
+                                height={100}
+                            />
+                        </Link>
                     </div>
                     <nav className="flex flex-wrap gap-x-8 gap-y-4">
                         {footerLinks.map((link) => (

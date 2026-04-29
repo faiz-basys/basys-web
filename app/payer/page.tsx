@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
+import Badge from "@/components/ui/Badge";
 
 const kpiItems = [
     { value: "5x", label: "LOWER ADMIN COSTS" },
@@ -74,14 +75,10 @@ export default function PayerPage() {
             <section className="mx-auto max-w-7xl px-8 py-24">
                 <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
                     <div className="space-y-8">
-                        <div className="inline-flex items-center gap-2 rounded-pill border border-outline-variant bg-surface-container-highest px-3 py-1">
-                            <span className="material-symbols-outlined text-sm">
-                                verified
-                            </span>
-                            <span className="text-xs font-semibold tracking-widest text-on-secondary-container uppercase">
-                                Payer Infrastructure 2.0
-                            </span>
-                        </div>
+                        <Badge
+                            icon="verified"
+                            title="PAYER INFRASTRUCTURE 2.0"
+                        />
 
                         <h1 className="max-w-xl text-5xl leading-tight font-bold text-primary">
                             Autonomous Medical Necessity &amp; Payment

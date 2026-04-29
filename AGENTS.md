@@ -8,8 +8,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Basys Landing Page Build Instructions
 
-When I provide HTML code, convert it into Next.js and Tailwind CSS.
-
 - Create reusable components where possible (only that can be reused, and not for minor ones) and use them across the application.
 - Prefer shared UI pieces such as `Footer`, `Navbar`, `Button`, and section-level components.
 - Build this as a landing page website for the Basys AI company.

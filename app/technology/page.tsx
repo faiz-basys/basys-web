@@ -1,4 +1,5 @@
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
+import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 
 const orchestrationMetrics = [
@@ -42,9 +43,7 @@ export default function TechnologyPage() {
             <section className="mx-auto max-w-7xl px-8 py-24">
                 <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
                     <div>
-                        <span className="mb-6 inline-block rounded-pill bg-secondary-container px-4 py-1 text-xs font-semibold tracking-wider text-on-secondary-container">
-                            CORE ARCHITECTURE
-                        </span>
+                        <Badge title="CORE ARCHITECTURE" />
                         <h1 className="mb-6 text-5xl leading-tight font-bold">
                             The Basys Engine: Localized Intelligence for
                             Healthcare.

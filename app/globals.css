@@ -172,6 +172,16 @@ body {
   }
 }
 
+/* EHR sync feed — list-only refresh (no vertical slide; avoids header jump) */
+@keyframes ehr-feed-shift {
+  from {
+    opacity: 0.65;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @layer utilities {
   .animate-hero-fade-up {
     animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -210,6 +220,9 @@ body {
   .animate-agent-shimmer-reason {
     animation: agent-shimmer-reason 3.5s linear infinite;
   }
+  .animate-ehr-feed-shift {
+    animation: ehr-feed-shift 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -224,7 +237,8 @@ body {
   .animate-agent-back-pop-in,
   .animate-agent-flyout-down,
   .animate-agent-eq-bar,
-  .animate-agent-shimmer-reason {
+  .animate-agent-shimmer-reason,
+  .animate-ehr-feed-shift {
     animation: none !important;
   }
   .animate-hero-fade-up,

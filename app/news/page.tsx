@@ -39,7 +39,7 @@ export default function NewsPage() {
                                 Press Release - Oct 24, 2024
                             </span>
                             <div className="flex h-8 w-24 items-center justify-center rounded bg-surface-container text-[10px] font-bold text-slate-400">
-                                BASYS.AI GLOBAL
+                                basys.ai GLOBAL
                             </div>
                         </div>
                         <h2 className="mb-4 text-3xl font-semibold text-primary group-hover:underline">

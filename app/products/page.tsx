@@ -1,52 +1,55 @@
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { TrustBar } from "@/components/sections/TrustBar";
+import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { ProductCard } from "@/components/ui/ProductCard";
 
 const products = [
     {
         icon: "verified_user",
-        title: "Prior Auth Agent",
+        title: "Prior Auth App",
         description:
-            "Automate the end-to-end authorization lifecycle with 99.9% accuracy. Designed for seamless integration with payer and provider systems.",
+            "Automate the entire prior authorization process from intake through review and outcome - connecting payers, providers, patients, and policies with secure documents, clinical context, EHR/FHIR paths, and configurable AI-assisted workflows.",
         ctaLabel: "EXPLORE SOLUTION",
+        href: "/products/prior-auth",
         className: "md:col-span-8 min-h-[480px]",
-        previewImageUrl:
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuD2Eq8gLj6iWUV16tutXq9nL0a6mGqyRkypCgRZZOa2Z7H0CscekskGX3FCB0uJEKWk-mUJTqeWWkkyDj44q2FMfC4I4_zD9YZKZfF7NwAFfg5L0vGk_2likTTLNNUTuUvBsixkOmSvhPmCi-OnU7qgLe6lSjq-KMkErOQ2Lsx2Y0fNNHU3IH5P3-2BzfNIEQNTu6sh7bRShzzDuQ-iO7y4wZ8eTSlZOF12AnDAf292OVBUxcE9X4MB_7Jpb2Dby4oo2zWJRgZD35I",
-        previewImageAlt:
-            "Clean medical dashboard with minimalist data visualizations and soft lighting.",
     },
     {
-        icon: "psychology",
-        title: "Medical Necessity Engine",
+        icon: "rate_review",
+        title: "Medical Record Review",
         description:
-            "Real-time clinical alignment powered by multi-agent semantic search and rigorous policy enforcement.",
+            "AI-assisted chart review for payers and partners—structured validation, ICD-10 aware coding, HCC-aligned insights, and audit-ready workflows from cover letters and PDFs.",
         ctaLabel: "LEARN MORE",
         tone: "dark" as const,
+        href: "/products/medical-record-review",
         className: "md:col-span-4 min-h-[480px]",
     },
     {
-        icon: "payments",
-        title: "Payment Integrity",
+        icon: "monitor_heart",
+        title: "Utilization Management AI",
         description:
-            "Fraud and waste detection using autonomous agents that monitor billing patterns and audit clinical documentation instantly.",
+            "Streamline concurrent and retrospective review with AI that understands clinical context-reducing unnecessary admissions and denials.",
         ctaLabel: "LEARN MORE",
+        href: "/products/utilization-management-ai",
         className: "md:col-span-4 min-h-[400px] bg-secondary-fixed",
     },
     {
-        icon: "clinical_notes",
-        title: "Provider Portal",
+        icon: "radar",
+        title: "AI-Powered FWA Detection",
         description:
-            "A seamless interface for clinical documentation submission and status tracking with intelligent field mapping.",
+            "Proactively identify potential fraud, waste, and abuse across claims and prior authorization real-time pattern analysis, risk scoring, and policy-aware insights for payers and providers.",
         ctaLabel: "LEARN MORE",
+        tone: "dark" as const,
+        href: "/products/fwa-detection",
         className: "md:col-span-4 min-h-[400px]",
     },
     {
-        icon: "hub",
-        title: "Interoperability Bridge",
+        icon: "construction",
+        title: "More products in development",
         description:
-            "Native FHIR and HL7 data orchestration to connect legacy systems to modern AI workflows with zero friction.",
-        ctaLabel: "LEARN MORE",
+            "Additional Basys capabilities are on the way-including deeper interoperability, embedded workflows, and partner integrations. Reach out if you want early visibility or to influence what ships next.",
+        ctaLabel: "COMING SOON",
+        comingSoon: true,
         className: "md:col-span-4 min-h-[400px] bg-surface-container-high",
     },
 ];
@@ -55,9 +58,7 @@ export default function ProductsPage() {
     return (
         <main className="pb-12 pt-24">
             <section className="mx-auto max-w-7xl px-6 py-16 text-center lg:py-24">
-                <div className="mb-6 inline-flex items-center rounded-pill bg-secondary-fixed px-3 py-1 text-xs tracking-widest text-on-surface-variant uppercase">
-                    Infrastructure
-                </div>
+                <Badge title="INFRASTRUCTURE" />
                 <h1 className="mx-auto mb-6 max-w-4xl text-5xl leading-tight font-bold text-primary md:text-6xl">
                     Modular AI Solutions for Healthcare Infrastructure.
                 </h1>
@@ -73,6 +74,7 @@ export default function ProductsPage() {
                         size="lg"
                         variant="outline"
                         className="w-full sm:w-auto border-outline"
+                        href="/contact-us"
                     >
                         Contact Sales
                     </Button>

@@ -1,5 +1,71 @@
+import { AgenticWorkflowCard } from "@/components/AgenticWorkflowCard";
+import { EhrSyncFeed } from "@/components/EhrSyncFeed";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
+import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+
+const successMetrics = [
+    {
+        value: "9x",
+        label: "Reduction in Documentation Time",
+    },
+    {
+        value: "95%",
+        label: "Faster Turnaround Time",
+    },
+    {
+        value: "2.5x",
+        label: "Lower Appeal Rate",
+    },
+];
+
+const aiCopilotSteps = [
+    {
+        icon: "policy",
+        title: "AI Assistant Surfaces Requirements",
+        description:
+            "Our intelligent system analyzes payer policies and patient conditions to identify exactly what documentation is needed for approval.",
+    },
+    {
+        icon: "verified",
+        title: "Fewer Denials Through Accuracy",
+        description:
+            "Improved submission quality leads to higher approval rates, reducing time spent on appeals and resubmissions.",
+    },
+    {
+        icon: "supervised_user_circle",
+        title: "Human Oversight Ensures Quality",
+        description:
+            "Providers maintain full control and oversight, with AI serving as a supportive copilot rather than replacement.",
+    },
+];
+
+const providerSuccessPillars = [
+    {
+        icon: "gavel",
+        title: "Compliance",
+        description:
+            "Ensure that all submissions adhere to regulatory requirements and payer guidelines, maintaining the highest standards of data security and patient privacy.",
+    },
+    {
+        icon: "handshake",
+        title: "Trust",
+        description:
+            "Our AI Assistant enhances accuracy by reducing errors in prior authorization submissions, fostering trust between providers and patients through reliable and consistent processes.",
+    },
+    {
+        icon: "bolt",
+        title: "Efficiency",
+        description:
+            "Accelerate the identification of required documentation and streamline workflows, minimizing administrative burdens and allowing providers to focus more on patient care.",
+    },
+    {
+        icon: "medical_services",
+        title: "Medical Necessity",
+        description:
+            "Ensure that every service provided meets established medical necessity criteria, supporting appropriate, evidence-based care decisions that align with payer guidelines and improve patient outcomes.",
+    },
+];
 
 const providerFeatures = [
     {
@@ -27,14 +93,7 @@ export default function ProviderPage() {
         <main className="pt-20">
             <section className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-8 py-24 lg:grid-cols-2 lg:gap-16">
                 <div className="space-y-6">
-                    <div className="inline-flex items-center gap-2 rounded-pill bg-secondary-container px-4 py-1 text-on-secondary-container">
-                        <span className="material-symbols-outlined text-[14px]">
-                            bolt
-                        </span>
-                        <span className="text-xs font-semibold tracking-wider">
-                            FOR HEALTHCARE PROVIDERS
-                        </span>
-                    </div>
+                    <Badge icon="bolt" title="FOR HEALTHCARE PROVIDERS" />
                     <h1 className="max-w-xl text-5xl leading-tight font-bold text-primary">
                         Transparency and Faster Patient Care.
                     </h1>
@@ -45,81 +104,33 @@ export default function ProviderPage() {
                         matters most: the patient.
                     </p>
                     <div className="flex flex-wrap gap-4 pt-2">
-                        <Button size="lg">Automate Now</Button>
-                        <Button size="lg" variant="outline">
-                            View Integration Guide
-                        </Button>
+                        <Button size="lg">Request Demo</Button>
                     </div>
                 </div>
 
-                <div className="group relative">
-                    <div className="overflow-hidden rounded-4xl border border-outline/10 bg-white shadow-[0_0_20px_rgba(0,0,0,0.05)]">
-                        <div className="flex items-center justify-between bg-primary px-6 py-4">
-                            <div className="flex items-center gap-3">
-                                <div className="h-2 w-2 rounded-pill bg-green-500" />
-                                <span className="text-xs tracking-widest text-on-primary/80 uppercase">
-                                    Agentic Workflow: ACTIVE
-                                </span>
-                            </div>
-                            <span className="material-symbols-outlined text-[18px] text-on-primary">
-                                terminal
+                <AgenticWorkflowCard />
+            </section>
+
+            <section className="bg-surface-container-low px-8 py-16">
+                <div className="mx-auto max-w-7xl space-y-4 text-center">
+                    <h2 className="text-sm font-semibold tracking-widest text-primary uppercase">
+                        Success Metrics
+                    </h2>
+                </div>
+                <div className="mx-auto mt-8 grid max-w-7xl grid-cols-1 gap-5 md:grid-cols-3">
+                    {successMetrics.map((metric) => (
+                        <article
+                            key={metric.label}
+                            className="flex flex-col items-center rounded-4xl border border-outline/5 bg-white p-8 text-center shadow-[0_0_20px_rgba(0,0,0,0.03)]"
+                        >
+                            <span className="text-5xl font-bold text-primary">
+                                {metric.value}
                             </span>
-                        </div>
-
-                        <div className="space-y-4 bg-surface-container-lowest p-6">
-                            <div className="flex items-start justify-between border-b border-outline/5 pb-4">
-                                <div>
-                                    <p className="text-xs text-on-surface-variant uppercase">
-                                        Current Protocol
-                                    </p>
-                                    <p className="text-xl font-semibold text-primary">
-                                        Prior Auth Determination
-                                    </p>
-                                </div>
-                                <div className="text-right">
-                                    <p className="text-xs text-on-surface-variant uppercase">
-                                        Latency
-                                    </p>
-                                    <p className="text-sm font-bold text-primary">
-                                        142ms
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="space-y-3">
-                                <div className="flex items-center gap-4 rounded-2xl bg-surface-container-low p-3">
-                                    <span className="material-symbols-outlined text-primary">
-                                        ecg
-                                    </span>
-                                    <div className="flex-1">
-                                        <p className="text-xs font-semibold text-primary">
-                                            EHR Syncing Complete
-                                        </p>
-                                        <div className="mt-1 h-1 w-full overflow-hidden rounded-pill bg-outline/10">
-                                            <div className="h-full w-full bg-primary" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-4 rounded-2xl border border-outline/10 p-3">
-                                    <span className="material-symbols-outlined text-primary">
-                                        verified
-                                    </span>
-                                    <p className="text-xs text-on-surface-variant">
-                                        Clinical Policy Alignment Verified
-                                    </p>
-                                </div>
-                                <div className="flex items-center gap-4 rounded-2xl border border-outline/10 p-3">
-                                    <span className="material-symbols-outlined text-primary">
-                                        auto_awesome
-                                    </span>
-                                    <p className="text-xs italic text-on-surface-variant">
-                                        Instant determination generated...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="absolute -right-6 -bottom-6 -z-10 h-32 w-32 rounded-pill bg-secondary-container/30 blur-3xl" />
+                            <p className="mt-3 max-w-xs text-sm font-medium text-on-surface-variant">
+                                {metric.label}
+                            </p>
+                        </article>
+                    ))}
                 </div>
             </section>
 
@@ -165,14 +176,6 @@ export default function ProviderPage() {
                         </article>
 
                         <article className="flex flex-col items-center space-y-4 rounded-4xl border border-outline/5 bg-[#f6f4f1] p-8 text-center md:col-span-4">
-                            <div className="mb-4 h-32 w-full overflow-hidden rounded-2xl border border-outline/5 bg-white">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    className="h-full w-full object-cover"
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR__oOPbaWuL1on5HTGa0uv_PK0FtOta5IXWNBB31pINxrP58fCUsx3IwNndsL0SHYjxgjYBzTgMV7YGqlaFJ_pcNpI3jOCOmusMA4jVgxxDB2gydffQ7P4Y-lCKryGxULT0TmA_7iCccU4piT8RhT8yCiU0teGrI1KrUZddBDc2s0drYgG86zxN34RQiwIViEvZziUau0Cub3ETlOXsVcLTuqW-9wLwc0nipfeVux_-qVaaVU2KdOr91uGwCnRfwG3JNinH_OdmU"
-                                    alt="Digital healthcare interface showing medical records and analytics."
-                                />
-                            </div>
                             <h3 className="text-2xl font-semibold">
                                 Deep EHR Integration
                             </h3>
@@ -180,6 +183,7 @@ export default function ProviderPage() {
                                 Works natively within Epic, Cerner, and
                                 AthenaHealth. No toggling required.
                             </p>
+                            <EhrSyncFeed />
                         </article>
 
                         <article className="flex flex-col justify-center space-y-4 rounded-4xl border border-outline/5 bg-white p-8 md:col-span-4">
@@ -244,6 +248,74 @@ export default function ProviderPage() {
                                 </h4>
                                 <p className="text-sm text-on-surface-variant">
                                     {feature.description}
+                                </p>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="border-y border-outline/5 bg-surface-container-low px-8 py-24">
+                <div className="mx-auto max-w-7xl space-y-10">
+                    <div className="space-y-3 text-center">
+                        <h2 className="text-3xl font-semibold text-primary">
+                            How Your AI Copilot Works
+                        </h2>
+                        <p className="mx-auto max-w-2xl text-sm text-on-surface-variant">
+                            Smart guidance for seamless, confident prior
+                            authorization.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                        {aiCopilotSteps.map((step) => (
+                            <article
+                                key={step.title}
+                                className="rounded-4xl border border-outline/10 bg-white p-8 transition-all hover:border-outline/20"
+                            >
+                                <span className="material-symbols-outlined mb-4 text-3xl text-primary">
+                                    {step.icon}
+                                </span>
+                                <h3 className="mb-3 text-xl font-semibold text-primary">
+                                    {step.title}
+                                </h3>
+                                <p className="text-sm leading-relaxed text-on-surface-variant">
+                                    {step.description}
+                                </p>
+                            </article>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-surface-container-lowest px-8 py-24">
+                <div className="mx-auto max-w-7xl space-y-10">
+                    <div className="space-y-3 text-center">
+                        <h2 className="text-3xl font-semibold text-primary">
+                            Built for Provider Success
+                        </h2>
+                        <p className="mx-auto max-w-2xl text-sm text-on-surface-variant">
+                            Our AI Copilot enables transparent, supported prior
+                            authorizations.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        {providerSuccessPillars.map((pillar) => (
+                            <article
+                                key={pillar.title}
+                                className="rounded-4xl border border-outline/10 bg-white p-8"
+                            >
+                                <div className="mb-4 flex items-center gap-3">
+                                    <span className="flex h-12 w-12 items-center justify-center rounded-pill bg-primary/10 text-primary">
+                                        <span className="material-symbols-outlined text-[24px]">
+                                            {pillar.icon}
+                                        </span>
+                                    </span>
+                                    <h3 className="text-xl font-semibold text-primary">
+                                        {pillar.title}
+                                    </h3>
+                                </div>
+                                <p className="text-sm leading-relaxed text-on-surface-variant">
+                                    {pillar.description}
                                 </p>
                             </article>
                         ))}
