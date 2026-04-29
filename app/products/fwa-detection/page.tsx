@@ -1,6 +1,8 @@
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { Button } from "@/components/ui/Button";
 
+const FWA_DETECTION_YOUTUBE_EMBED_ID = "THJxe_vXZ50";
+
 const capabilities = [
     {
         icon: "hub",
@@ -44,8 +46,7 @@ export default function FwaDetectionProductPage() {
                         </div>
 
                         <h1 className="max-w-xl text-4xl leading-tight font-bold text-primary sm:text-5xl">
-                            AI-Powered Fraud, Waste &amp; Abuse (FWA)
-                            Detection
+                            AI-Powered Fraud, Waste &amp; Abuse (FWA) Detection
                         </h1>
                         <p className="max-w-xl text-lg font-medium leading-relaxed text-on-surface">
                             Basys.ai&apos;s FWA solution leverages advanced AI
@@ -61,10 +62,10 @@ export default function FwaDetectionProductPage() {
                             Built for payment integrity, special investigation
                             units, and compliance partners who need scalable
                             surveillance without drowning analysts in false
-                            positives. Outputs are designed to feed existing case
-                            management and appeals processes—with configurable
-                            sensitivity, policy versioning, and human sign-off
-                            on consequential actions.
+                            positives. Outputs are designed to feed existing
+                            case management and appeals processes—with
+                            configurable sensitivity, policy versioning, and
+                            human sign-off on consequential actions.
                         </p>
 
                         <div className="flex flex-wrap gap-4">
@@ -77,12 +78,17 @@ export default function FwaDetectionProductPage() {
 
                     <div className="relative">
                         <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-surface-container" />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            alt="Fraud and payment integrity analytics"
-                            className="h-[400px] w-full rounded-4xl border border-outline/10 object-cover shadow-sm"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgN5l1kaWwjv9byscN4W4iEssfbpc1W57pZXicv47Ra27TD51ME31HzkhazKL1Daa3EwcLw3_DKPDEkaHqJTwZffMyN6kh9Z64hK0al8OXXLEPuItW3nS-44C2K67Np2BbdhFMljcAmu5UD76CFBGyXnA1vqLjSw8I5BkFanjhv693AynyJRchspxvEqcWapd5ZLscPCAtK9WHA-vvAlDQK4HPP3yBz2YrZbL87-2s3cha2OAgiaLh8AAbUxp1rHxBXg6ZGhXers"
-                        />
+                        <div className="aspect-video w-full overflow-hidden rounded-4xl border border-outline/10 shadow-sm">
+                            <iframe
+                                title="Fraud and payment integrity analytics"
+                                className="h-full w-full"
+                                src={`https://www.youtube.com/embed/${FWA_DETECTION_YOUTUBE_EMBED_ID}`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -132,9 +138,9 @@ export default function FwaDetectionProductPage() {
                         vendor partners, and enterprise provider organizations
                         that need consistent surveillance across claims and
                         authorization touchpoints. Ideal when you want AI to
-                        narrow the funnel of suspicious activity while your staff
-                        retains ownership of final fraud determinations and
-                        regulatory reporting obligations.
+                        narrow the funnel of suspicious activity while your
+                        staff retains ownership of final fraud determinations
+                        and regulatory reporting obligations.
                     </p>
                 </article>
             </section>

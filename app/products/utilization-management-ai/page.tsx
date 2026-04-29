@@ -1,6 +1,8 @@
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { Button } from "@/components/ui/Button";
 
+const UM_AI_YOUTUBE_EMBED_ID = "KooUnlz5dkk";
+
 const capabilities = [
     {
         icon: "pending_actions",
@@ -88,12 +90,17 @@ export default function UtilizationManagementAiProductPage() {
 
                     <div className="relative">
                         <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-surface-container" />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            alt="Utilization management and care coordination"
-                            className="h-[400px] w-full rounded-4xl border border-outline/10 object-cover shadow-sm"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgN5l1kaWwjv9byscN4W4iEssfbpc1W57pZXicv47Ra27TD51ME31HzkhazKL1Daa3EwcLw3_DKPDEkaHqJTwZffMyN6kh9Z64hK0al8OXXLEPuItW3nS-44C2K67Np2BbdhFMljcAmu5UD76CFBGyXnA1vqLjSw8I5BkFanjhv693AynyJRchspxvEqcWapd5ZLscPCAtK9WHA-vvAlDQK4HPP3yBz2YrZbL87-2s3cha2OAgiaLh8AAbUxp1rHxBXg6ZGhXers"
-                        />
+                        <div className="aspect-video w-full overflow-hidden rounded-4xl border border-outline/10 shadow-sm">
+                            <iframe
+                                title="Utilization management and care coordination"
+                                className="h-full w-full"
+                                src={`https://www.youtube.com/embed/${UM_AI_YOUTUBE_EMBED_ID}`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>

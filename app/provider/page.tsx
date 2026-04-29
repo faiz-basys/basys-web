@@ -3,6 +3,7 @@ import { EhrSyncFeed } from "@/components/EhrSyncFeed";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 const successMetrics = [
     {
@@ -355,10 +356,12 @@ export default function ProviderPage() {
 
                     <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-4xl border border-outline/5 bg-surface-container md:w-1/3">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                             className="h-full w-full object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMDGr4gh9NtLMsRFzdJFY4fxr-fQfmbpV9udQxANYKHYQDfyODzq2kiHqn9tmx_Fl9UrKLiGPf--wbLpwOh15w6F3ZQ7PCm-n1bHJiQ4MgJnjPL7cCQmWKnvheS7H2G1CtutwlVXpXp_6DcyfIKgk1Ct9Bzu9K2OaMgdknImQ_k6QS7SRI9F2stdt2RRdVzkt1-7gm729KU6-KZwPcZWTJg0Bx_aES0HqjeDJMNpqxFkMM6wkOJXo9FMTrxOk-ktKcge_Sf977gBg"
                             alt="High-tech medical hallway representing precision and speed."
+                            width={1000}
+                            height={1000}
                         />
                         <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
                     </div>

@@ -1,6 +1,6 @@
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { Button } from "@/components/ui/Button";
-import Link from "next/link";
+import Image from "next/image";
 
 const capabilities = [
     {
@@ -99,10 +99,12 @@ export default function PriorAuthProductPage() {
                     <div className="relative">
                         <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-surface-container" />
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                             alt="Clinical workflow and authorization review"
                             className="h-[400px] w-full rounded-4xl border border-outline/10 object-cover shadow-sm"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcgN5l1kaWwjv9byscN4W4iEssfbpc1W57pZXicv47Ra27TD51ME31HzkhazKL1Daa3EwcLw3_DKPDEkaHqJTwZffMyN6kh9Z64hK0al8OXXLEPuItW3nS-44C2K67Np2BbdhFMljcAmu5UD76CFBGyXnA1vqLjSw8I5BkFanjhv693AynyJRchspxvEqcWapd5ZLscPCAtK9WHA-vvAlDQK4HPP3yBz2YrZbL87-2s3cha2OAgiaLh8AAbUxp1rHxBXg6ZGhXers"
+                            width={1000}
+                            height={1000}
                         />
                     </div>
                 </div>
