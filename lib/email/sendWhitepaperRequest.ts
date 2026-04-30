@@ -1,4 +1,10 @@
 import {
+    basysEmailDocument,
+    emailDetailRows,
+    emailMailtoLink,
+    emailMutedNote,
+} from "@/lib/email/htmlTemplate";
+import {
     createSmtpTransport,
     escapeHtml,
     getMailFromAddress,
@@ -34,15 +40,34 @@ export async function sendWhitepaperRequestEmail(
         `Follow up with the PDF or download link as per your process.`,
     ].join("\n");
 
-    const html = `
-<p><strong>White paper access request</strong></p>
-<p><em>Page: /white-paper-preview</em></p>
-<ul>
-  <li><strong>Name:</strong> ${escapeHtml(payload.name)}</li>
-  <li><strong>Email:</strong> ${escapeHtml(payload.email)}</li>
-  ${payload.organization.trim() ? `<li><strong>Organization:</strong> ${escapeHtml(payload.organization.trim())}</li>` : "<li><em>No organization provided.</em></li>"}
-</ul>
+    const rows: { label: string; valueHtml: string }[] = [
+        { label: "Name", valueHtml: escapeHtml(payload.name) },
+        {
+            label: "Email",
+            valueHtml: emailMailtoLink(payload.email),
+        },
+        {
+            label: "Organization",
+            valueHtml: payload.organization.trim()
+                ? escapeHtml(payload.organization.trim())
+                : `<span style="color:#858382;font-size:13px;font-style:italic;">Not provided</span>`,
+        },
+    ];
+
+    const contentHtml = `
+${emailDetailRows(rows)}
+${emailMutedNote("Requested from /white-paper-preview · Follow up with the full white paper or download link.")}
 `.trim();
+
+    const html = basysEmailDocument({
+        badgeLabel: "White paper",
+        title: "Access request",
+        subtitle:
+            "Someone requested the prior authorization white paper on basys.ai.",
+        contentHtml,
+        footerNote:
+            "Reply to this email to reach the requester. Send the asset your team uses for this campaign.",
+    });
 
     const transporter = createSmtpTransport();
 

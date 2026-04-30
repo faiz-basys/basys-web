@@ -196,7 +196,9 @@ export default function PayerPage() {
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            <Button size="lg">Request Demo</Button>
+                            <Button size="lg" href="/contact-us">
+                                Request Demo
+                            </Button>
                         </div>
                     </div>
 

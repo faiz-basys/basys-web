@@ -71,7 +71,7 @@ export function CareerHiringHero({ roles = [] }: { roles?: CareerHeroRole[] }) {
                         <p className="mt-2 text-xs leading-relaxed text-on-primary/75">
                             {count === 0
                                 ? "New roles open regularly—join the list below to hear first."
-                                : "Clinical intelligence, built by people who care about outcomes."}
+                                : "Basys is a healthcare AI company, built by people who care about outcomes."}
                         </p>
                     </div>
 

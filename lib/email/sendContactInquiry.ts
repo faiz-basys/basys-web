@@ -1,4 +1,10 @@
 import {
+    basysEmailDocument,
+    emailDetailRows,
+    emailMailtoLink,
+    emailPlainTextBlock,
+} from "@/lib/email/htmlTemplate";
+import {
     createSmtpTransport,
     escapeHtml,
     getContactRecipient,
@@ -36,16 +42,34 @@ export async function sendContactInquiryEmail(
         payload.message.trim() || `(empty)`,
     ].join("\n");
 
-    const html = `
-<p><strong>New contact form submission</strong></p>
-<ul>
-  <li><strong>Name:</strong> ${escapeHtml(payload.name)}</li>
-  <li><strong>Email:</strong> ${escapeHtml(payload.email)}</li>
-  ${payload.organization.trim() ? `<li><strong>Organization:</strong> ${escapeHtml(payload.organization.trim())}</li>` : "<li><em>No organization provided.</em></li>"}
-</ul>
-<p><strong>Message</strong></p>
-<p>${escapeHtml(payload.message).replace(/\n/g, "<br/>")}</p>
+    const rows: { label: string; valueHtml: string }[] = [
+        { label: "Name", valueHtml: escapeHtml(payload.name) },
+        {
+            label: "Email",
+            valueHtml: emailMailtoLink(payload.email),
+        },
+        {
+            label: "Organization",
+            valueHtml: payload.organization.trim()
+                ? escapeHtml(payload.organization.trim())
+                : `<span style="color:#858382;font-size:13px;font-style:italic;">Not provided</span>`,
+        },
+    ];
+
+    const contentHtml = `
+${emailDetailRows(rows)}
+${emailPlainTextBlock("Message", payload.message.trim() || "(empty)")}
 `.trim();
+
+    const html = basysEmailDocument({
+        badgeLabel: "Contact",
+        title: "New inquiry",
+        subtitle:
+            "Someone submitted the Get in touch form on basys.ai/contact-us.",
+        contentHtml,
+        footerNote:
+            "Please do not reply to this email. This is an automated message.",
+    });
 
     const transporter = createSmtpTransport();
 

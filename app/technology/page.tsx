@@ -120,7 +120,9 @@ export default function TechnologyPage() {
                             ))}
                         </div>
                         <div className="flex flex-wrap gap-4 pt-2">
-                            <Button size="lg">Request Demo</Button>
+                            <Button size="lg" href="/contact-us">
+                                Request Demo
+                            </Button>
                         </div>
                     </div>
 

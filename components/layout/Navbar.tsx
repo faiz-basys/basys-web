@@ -130,7 +130,7 @@ export function Navbar() {
                     </div>
                 ) : null}
             </nav>
-            <Button>Request a Demo</Button>
+            <Button href="/contact-us">Request a Demo</Button>
         </header>
     );
 }

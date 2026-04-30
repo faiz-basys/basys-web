@@ -75,7 +75,9 @@ export default function Home() {
                         </p>
 
                         <div className="animate-hero-fade-up flex flex-col gap-4 delay-300 sm:flex-row md:delay-280">
-                            <Button size="lg">Request a Demo</Button>
+                            <Button size="lg" href="/contact-us">
+                                Request a Demo
+                            </Button>
                             <Button
                                 size="lg"
                                 variant="outline"

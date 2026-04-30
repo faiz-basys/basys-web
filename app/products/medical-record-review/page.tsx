@@ -62,16 +62,15 @@ export default function MedicalRecordReviewProductPage() {
                         </p>
 
                         <div className="flex flex-wrap gap-4">
-                            <Button size="lg">Request a Demo</Button>
-                            <Button size="lg" variant="outline">
-                                Contact Sales
+                            <Button size="lg" href="/contact-us">
+                                Request a Demo
                             </Button>
                         </div>
                     </div>
 
                     <div className="relative">
                         <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-surface-container" />
-                        { }
+                        {}
                         <Image
                             alt="Medical record review and clinical documentation"
                             className="h-[400px] w-full rounded-4xl border border-outline/10 object-cover shadow-sm"

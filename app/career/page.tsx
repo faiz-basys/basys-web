@@ -1,9 +1,6 @@
 import { CareerHiringHero } from "@/components/sections/CareerHiringHero";
 import { Button } from "@/components/ui/Button";
-import {
-    GENERAL_APPLICATION_SLUG,
-    jobRoles,
-} from "@/lib/career/jobs";
+import { GENERAL_APPLICATION_SLUG, jobRoles } from "@/lib/career/jobs";
 import Link from "next/link";
 
 const heroRoles = jobRoles.map(({ title, icon }) => ({ title, icon }));
@@ -25,7 +22,7 @@ export default function CareerPage() {
                     <h1 className="text-5xl leading-tight font-bold text-on-surface lg:text-[64px] lg:leading-[1.1]">
                         Architecting the future of{" "}
                         <span className="text-primary underline decoration-2 underline-offset-8">
-                            clinical intelligence
+                            healthcare AI
                         </span>
                         .
                     </h1>
@@ -37,11 +34,7 @@ export default function CareerPage() {
                     </p>
 
                     <div className="flex gap-4">
-                        <Button
-                            size="lg"
-                            className="uppercase"
-                            href="#jobs"
-                        >
+                        <Button size="lg" className="uppercase" href="#jobs">
                             View Open Roles
                         </Button>
                     </div>
@@ -88,10 +81,9 @@ export default function CareerPage() {
                                     Life at basys.ai
                                 </span>
                                 <h2 className="mb-4 max-w-xl text-3xl font-semibold">
-                                    Build clinical intelligence alongside
-                                    researchers, clinicians, and platform
-                                    engineers—where your craft shows up in real
-                                    care pathways.
+                                    Build healthcare AI alongside researchers,
+                                    clinicians, and platform engineers—where
+                                    your craft shows up in real care pathways.
                                 </h2>
                                 <div className="flex flex-wrap items-center gap-6">
                                     <span className="text-xs text-white/60">

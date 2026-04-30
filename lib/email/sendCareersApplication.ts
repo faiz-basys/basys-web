@@ -1,4 +1,12 @@
 import {
+    basysEmailDocument,
+    emailDetailRows,
+    emailExternalLink,
+    emailMailtoLink,
+    emailMutedNote,
+    emailPlainTextBlock,
+} from "@/lib/email/htmlTemplate";
+import {
     createSmtpTransport,
     escapeHtml,
     getCareersRecipient,
@@ -48,19 +56,56 @@ export async function sendCareersApplicationEmail(
         payload.coverLetter.trim()
             ? `Cover letter:\n${payload.coverLetter.trim()}`
             : `(No cover letter provided)`,
+        ``,
+        `Resume attached: ${resumeName}`,
     ].filter(Boolean);
 
-    const htmlBody = `
-<p><strong>New careers application</strong></p>
-<ul>
-  <li><strong>Role:</strong> ${escapeHtml(payload.roleTitle)} (${escapeHtml(payload.roleSlug)})</li>
-  <li><strong>Name:</strong> ${escapeHtml(payload.applicantName)}</li>
-  <li><strong>Email:</strong> ${escapeHtml(payload.applicantEmail)}</li>
-  ${payload.phone ? `<li><strong>Phone:</strong> ${escapeHtml(payload.phone)}</li>` : ""}
-  ${payload.linkedin ? `<li><strong>LinkedIn:</strong> ${escapeHtml(payload.linkedin)}</li>` : ""}
-</ul>
-${payload.coverLetter.trim() ? `<p><strong>Cover letter</strong></p><p>${escapeHtml(payload.coverLetter).replace(/\n/g, "<br/>")}</p>` : "<p><em>No cover letter provided.</em></p>"}
+    const rows: { label: string; valueHtml: string }[] = [
+        {
+            label: "Role",
+            valueHtml: `<strong style="font-weight:600;">${escapeHtml(payload.roleTitle)}</strong><span style="color:#858382;font-size:12px;display:block;margin-top:4px;">${escapeHtml(payload.roleSlug)}</span>`,
+        },
+        { label: "Name", valueHtml: escapeHtml(payload.applicantName) },
+        {
+            label: "Email",
+            valueHtml: emailMailtoLink(payload.applicantEmail),
+        },
+    ];
+
+    if (payload.phone) {
+        rows.push({
+            label: "Phone",
+            valueHtml: escapeHtml(payload.phone),
+        });
+    }
+
+    if (payload.linkedin) {
+        rows.push({
+            label: "LinkedIn",
+            valueHtml: emailExternalLink(payload.linkedin),
+        });
+    }
+
+    const attachmentNote = `<p style="margin:20px 0 0;font-size:13px;color:#45464d;line-height:1.5;">Resume is attached to this message as <strong>${escapeHtml(resumeName)}</strong>.</p>`;
+
+    const coverBlock = payload.coverLetter.trim()
+        ? emailPlainTextBlock("Cover letter", payload.coverLetter.trim())
+        : emailMutedNote("No cover letter provided.");
+
+    const contentHtml = `
+${emailDetailRows(rows)}
+${attachmentNote}
+${coverBlock}
 `.trim();
+
+    const html = basysEmailDocument({
+        badgeLabel: "Careers",
+        title: "New application",
+        subtitle: "Someone applied through the careers form on basys.ai.",
+        contentHtml,
+        footerNote:
+            "Please do not reply to this email. This is an automated message.",
+    });
 
     const transporter = createSmtpTransport();
 
@@ -70,7 +115,7 @@ ${payload.coverLetter.trim() ? `<p><strong>Cover letter</strong></p><p>${escapeH
         replyTo,
         subject: `[Careers] ${payload.roleTitle} — ${payload.applicantName}`,
         text: textLines.join("\n"),
-        html: htmlBody,
+        html,
         attachments: [
             {
                 filename: resumeName,

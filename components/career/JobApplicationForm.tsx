@@ -81,7 +81,9 @@ export function JobApplicationForm({ roleSlug, roleTitle }: Props) {
                         className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                         aria-invalid={Boolean(state.fieldErrors?.name)}
                         aria-describedby={
-                            state.fieldErrors?.name ? "apply-name-error" : undefined
+                            state.fieldErrors?.name
+                                ? "apply-name-error"
+                                : undefined
                         }
                     />
                     {state.fieldErrors?.name ? (
@@ -199,7 +201,9 @@ export function JobApplicationForm({ roleSlug, roleTitle }: Props) {
                     className="w-full cursor-pointer rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 text-sm file:mr-4 file:rounded-xl file:border-0 file:bg-primary file:px-4 file:py-2 file:text-sm file:font-semibold file:text-on-primary"
                     aria-invalid={Boolean(state.fieldErrors?.resume)}
                     aria-describedby={
-                        state.fieldErrors?.resume ? "apply-resume-error" : undefined
+                        state.fieldErrors?.resume
+                            ? "apply-resume-error"
+                            : undefined
                     }
                 />
                 {state.fieldErrors?.resume ? (
@@ -226,7 +230,7 @@ export function JobApplicationForm({ roleSlug, roleTitle }: Props) {
                     id="apply-cover"
                     name="coverLetter"
                     rows={6}
-                    placeholder="Tell us why you’re excited about clinical intelligence at basys.ai…"
+                    placeholder="Tell us why you're excited about healthcare AI at basys.ai…"
                     className="w-full resize-y rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                 />
             </div>

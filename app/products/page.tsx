@@ -67,16 +67,12 @@ export default function ProductsPage() {
                     regulated, high-stakes enterprise deployments.
                 </p>
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <Button size="lg" className="w-full sm:w-auto">
-                        Request a Demo
-                    </Button>
                     <Button
                         size="lg"
-                        variant="outline"
-                        className="w-full sm:w-auto border-outline"
+                        className="w-full sm:w-auto"
                         href="/contact-us"
                     >
-                        Contact Sales
+                        Request a Demo
                     </Button>
                 </div>
             </section>
