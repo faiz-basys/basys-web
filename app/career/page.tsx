@@ -1,28 +1,12 @@
+import { CareerHiringHero } from "@/components/sections/CareerHiringHero";
 import { Button } from "@/components/ui/Button";
+import {
+    GENERAL_APPLICATION_SLUG,
+    jobRoles,
+} from "@/lib/career/jobs";
+import Link from "next/link";
 
-const jobRoles = [
-    {
-        title: "Senior AI Research Scientist",
-        location: "Cambridge, MA / Remote",
-        type: "Full-time",
-        icon: "smart_toy",
-        iconBgClass: "bg-primary",
-    },
-    {
-        title: "Clinical Lead (Oncology)",
-        location: "Remote (US)",
-        type: "Full-time",
-        icon: "stethoscope",
-        iconBgClass: "bg-on-tertiary-fixed-variant",
-    },
-    {
-        title: "MLOps Engineer",
-        location: "Hybrid / Cambridge",
-        type: "Full-time",
-        icon: "database",
-        iconBgClass: "bg-primary",
-    },
-];
+const heroRoles = jobRoles.map(({ title, icon }) => ({ title, icon }));
 
 export default function CareerPage() {
     return (
@@ -53,27 +37,21 @@ export default function CareerPage() {
                     </p>
 
                     <div className="flex gap-4">
-                        <Button size="lg" className="uppercase">
-                            View Open Roles
-                        </Button>
                         <Button
                             size="lg"
-                            variant="outline"
                             className="uppercase"
+                            href="#jobs"
                         >
-                            Our Culture
+                            View Open Roles
                         </Button>
                     </div>
                 </div>
 
-                <div className="group relative">
+                <div className="group relative flex justify-center lg:justify-end">
                     <div className="absolute -inset-4 rounded-[3rem] bg-linear-to-tr from-surface-container-high to-transparent opacity-50 blur-2xl" />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        alt="Our Team"
-                        className="relative aspect-4/3 w-full rounded-4xl border border-outline/10 object-cover shadow-sm"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb6J_JQ6MXzXR3XoOL4XXIAFVuBj0KQ6JEIgP3rI9YOhtTNlx1G2n8wxIUWkueDK3YZV7DWwSfAf890IK5WZS0vrH-Qr6poqQbmJviZlS8QzO-OUMRBGYAxT_txtvsIpUIbhe29XUoIhec62Jsm-DsAoE5E2ZYo1bfRKwpdhwwQG4JBfEgw0zY6piD6YOTITuz5RINwAyKTNQR4Y7nLSaCzs1MaLnGztZ2j5OWWxlGOyYyqs29F7JV6WxN_xwtTSHCZ-u02vQzHuk"
-                    />
+                    <div className="relative w-full max-w-lg">
+                        <CareerHiringHero roles={heroRoles} />
+                    </div>
                 </div>
             </section>
 
@@ -97,12 +75,34 @@ export default function CareerPage() {
                                 pathways.
                             </p>
                         </div>
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                            alt="Clinical Tech"
-                            className="mt-6 h-48 w-full rounded-2xl object-cover"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQYQtgW-smL_vVLhz4OgBbWEuhVGY3rt10Fmh-_GtRDnONV1QIyRJVATxvMzvVUEYOgyFTzjapY94AzfIm_4qcL2D8QyYUtmq1LcyIwN_Lia9Xj9LWEZBir426yFMrqF5e9LpIi8YimYIfRUKGa09xbvAM1WiRzholUSL3pC1Ml88qrBmeJYE8lcq4jXZtoyOGdvZZlL33_R0VDh66cHft03foAJAkf0jfwqYksANoj-ID3WBNmY1nJrCejeOmC2Wc9ifx70V9gHk"
-                        />
+                        <article className="group relative col-span-12 cursor-pointer overflow-hidden rounded-4xl lg:col-span-8">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvq2k3iHDiC3qUU3gOxScquhHowvz1uwFC6ZKi5F5dOZnbtCiGZcMK-r0hpqN1-hiwNbnbKmgmia5tnRuXESV59G40rbXKEBdCLK4kQX0PdNKH7EgLrM44c_ELVOFwI_mpZkU2pu8uk0PQ9LvfBXwMgtsfXB9IIIHxuOYesT5Su4SVYgIwhNX3xov-_C5knIvjKyCx9iM6bWRAeF0zeXrnLnBxVhSaxda2SVXjzXCYcgIN6ZJskPO-jiGjQ4eq8tKdep_ncHRZzso"
+                                alt="Abstract geometry suggesting collaboration across clinical and engineering teams."
+                            />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+                            <div className="relative flex h-full flex-col justify-end p-10 text-white">
+                                <span className="mb-4 block text-xs font-semibold tracking-widest text-white/70 uppercase">
+                                    Life at basys.ai
+                                </span>
+                                <h2 className="mb-4 max-w-xl text-3xl font-semibold">
+                                    Build clinical intelligence alongside
+                                    researchers, clinicians, and platform
+                                    engineers—where your craft shows up in real
+                                    care pathways.
+                                </h2>
+                                <div className="flex flex-wrap items-center gap-6">
+                                    <span className="text-xs text-white/60">
+                                        Hybrid &amp; remote-friendly
+                                    </span>
+                                    <span className="text-xs text-white/60">
+                                        Cambridge · US-wide roles
+                                    </span>
+                                </div>
+                            </div>
+                        </article>
                     </article>
 
                     <article className="flex flex-col justify-center rounded-4xl bg-primary p-8 text-on-primary md:col-span-2">
@@ -149,81 +149,117 @@ export default function CareerPage() {
                             Open Positions
                         </h2>
                         <p className="mt-2 text-sm text-on-surface-variant">
-                            Help us build the next generation of healthcare
-                            infrastructure.
+                            {jobRoles.length === 0
+                                ? "We don't have listed openings right now. You can still get in touch below."
+                                : "Help us build the next generation of healthcare infrastructure."}
                         </p>
                     </div>
-                    <div className="flex gap-2">
-                        <button className="rounded-pill bg-surface-container px-4 py-2 text-xs font-semibold">
-                            All Roles
-                        </button>
-                        <button className="rounded-pill bg-surface-container px-4 py-2 text-xs font-semibold transition-colors hover:bg-surface-container-high">
-                            AI &amp; Engineering
-                        </button>
-                        <button className="rounded-pill bg-surface-container px-4 py-2 text-xs font-semibold transition-colors hover:bg-surface-container-high">
-                            Clinical Operations
-                        </button>
-                    </div>
+                    {jobRoles.length > 0 ? (
+                        <div className="flex flex-wrap gap-2">
+                            <button
+                                type="button"
+                                className="rounded-pill bg-surface-container px-4 py-2 text-xs font-semibold"
+                            >
+                                All Roles
+                            </button>
+                            <button
+                                type="button"
+                                className="rounded-pill bg-surface-container px-4 py-2 text-xs font-semibold transition-colors hover:bg-surface-container-high"
+                            >
+                                AI &amp; Engineering
+                            </button>
+                            <button
+                                type="button"
+                                className="rounded-pill bg-surface-container px-4 py-2 text-xs font-semibold transition-colors hover:bg-surface-container-high"
+                            >
+                                Clinical Operations
+                            </button>
+                        </div>
+                    ) : null}
                 </div>
 
                 <div className="space-y-4">
-                    {jobRoles.map((role) => (
-                        <article
-                            key={role.title}
-                            className="group flex flex-col items-start justify-between rounded-4xl border border-outline/5 bg-surface-container-low p-6 transition-all hover:bg-white md:flex-row md:items-center"
-                        >
-                            <div className="flex items-center gap-6">
-                                <div
-                                    className={`flex h-12 w-12 items-center justify-center rounded-pill text-on-primary ${role.iconBgClass}`}
-                                >
-                                    <span className="material-symbols-outlined">
-                                        {role.icon}
-                                    </span>
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-semibold">
-                                        {role.title}
-                                    </h3>
-                                    <div className="mt-1 flex gap-4">
-                                        <span className="flex items-center gap-1 text-xs text-on-tertiary-container">
-                                            <span className="material-symbols-outlined text-[14px]">
-                                                location_on
-                                            </span>
-                                            {role.location}
-                                        </span>
-                                        <span className="flex items-center gap-1 text-xs text-on-tertiary-container">
-                                            <span className="material-symbols-outlined text-[14px]">
-                                                schedule
-                                            </span>
-                                            {role.type}
+                    {jobRoles.length === 0 ? (
+                        <div className="rounded-4xl border border-outline/10 bg-surface-container-low px-6 py-14 text-center md:px-10">
+                            <span className="material-symbols-outlined mb-4 text-4xl text-on-surface-variant">
+                                work_history
+                            </span>
+                            <h3 className="text-lg font-semibold text-on-surface">
+                                No open positions right now
+                            </h3>
+                            <p className="mx-auto mt-2 max-w-md text-sm text-on-surface-variant">
+                                We post clinical, research, and platform roles
+                                here as they open. Send a general application or
+                                subscribe for alerts. We read every message.
+                            </p>
+                            <Button
+                                href={`/career/apply/${GENERAL_APPLICATION_SLUG}`}
+                                size="lg"
+                                className="mt-8 uppercase"
+                            >
+                                General application
+                            </Button>
+                        </div>
+                    ) : (
+                        jobRoles.map((role) => (
+                            <Link
+                                key={role.slug}
+                                href={`/career/apply/${role.slug}`}
+                                className="group flex flex-col items-start justify-between rounded-4xl border border-outline/5 bg-surface-container-low p-6 transition-all hover:bg-white md:flex-row md:items-center"
+                            >
+                                <div className="flex items-center gap-6">
+                                    <div
+                                        className={`flex h-12 w-12 items-center justify-center rounded-pill text-on-primary ${role.iconBgClass}`}
+                                    >
+                                        <span className="material-symbols-outlined">
+                                            {role.icon}
                                         </span>
                                     </div>
+                                    <div>
+                                        <h3 className="text-xl font-semibold">
+                                            {role.title}
+                                        </h3>
+                                        <div className="mt-1 flex gap-4">
+                                            <span className="flex items-center gap-1 text-xs text-on-tertiary-container">
+                                                <span className="material-symbols-outlined text-[14px]">
+                                                    location_on
+                                                </span>
+                                                {role.location}
+                                            </span>
+                                            <span className="flex items-center gap-1 text-xs text-on-tertiary-container">
+                                                <span className="material-symbols-outlined text-[14px]">
+                                                    schedule
+                                                </span>
+                                                {role.type}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="mt-6 flex items-center gap-4 md:mt-0">
-                                <span className="hidden text-xs font-semibold text-primary opacity-0 transition-opacity group-hover:opacity-100 md:block">
-                                    Apply Now
-                                </span>
-                                <button className="flex h-10 w-10 items-center justify-center rounded-pill border border-primary transition-all group-hover:bg-primary group-hover:text-on-primary">
-                                    <span className="material-symbols-outlined">
-                                        arrow_forward
+                                <div className="mt-6 flex items-center gap-4 md:mt-0">
+                                    <span className="hidden text-xs font-semibold text-primary opacity-0 transition-opacity group-hover:opacity-100 md:block">
+                                        Apply Now
                                     </span>
-                                </button>
-                            </div>
-                        </article>
-                    ))}
+                                    <span className="flex h-10 w-10 items-center justify-center rounded-pill border border-primary transition-all group-hover:bg-primary group-hover:text-on-primary">
+                                        <span className="material-symbols-outlined">
+                                            arrow_forward
+                                        </span>
+                                    </span>
+                                </div>
+                            </Link>
+                        ))
+                    )}
                 </div>
 
                 <div className="mt-12 text-center">
                     <p className="text-sm text-on-surface-variant">
                         Don&apos;t see a role that fits?{" "}
-                        <a
-                            href="#"
+                        <Link
+                            href={`/career/apply/${GENERAL_APPLICATION_SLUG}`}
                             className="font-semibold text-primary underline"
                         >
                             Send us a general application
-                        </a>
+                        </Link>
                         .
                     </p>
                 </div>

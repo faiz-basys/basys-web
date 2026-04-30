@@ -3,6 +3,7 @@ import Badge from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { BenchmarkChart } from "@/components/white-paper/BenchmarkChart";
+import { WhitePaperRequestForm } from "@/components/white-paper/WhitePaperRequestForm";
 
 export const metadata: Metadata = {
     title: "White Paper Preview | basys.ai",
@@ -219,67 +220,7 @@ export default function WhitePaperPreviewPage() {
                     <p className="mt-4 text-center text-on-surface-variant">
                         Request the full whitepaper here:
                     </p>
-                    <form
-                        className="mt-10 space-y-6 rounded-4xl border border-outline/10 bg-surface-container-lowest p-8"
-                        action="#"
-                        method="post"
-                    >
-                        <div className="space-y-2">
-                            <label
-                                className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                htmlFor="wp-name"
-                            >
-                                Name
-                            </label>
-                            <input
-                                id="wp-name"
-                                name="name"
-                                type="text"
-                                autoComplete="name"
-                                placeholder="Your name"
-                                className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label
-                                className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                htmlFor="wp-email"
-                            >
-                                Email address
-                            </label>
-                            <input
-                                id="wp-email"
-                                name="email"
-                                type="email"
-                                autoComplete="email"
-                                placeholder="you@website.com"
-                                className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                            />
-                        </div>
-                        <div className="space-y-2">
-                            <label
-                                className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                htmlFor="wp-org"
-                            >
-                                Organization (Optional)
-                            </label>
-                            <input
-                                id="wp-org"
-                                name="organization"
-                                type="text"
-                                autoComplete="organization"
-                                placeholder="Health plan or organization"
-                                className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                            />
-                        </div>
-                        <Button
-                            type="submit"
-                            className="w-full py-4 text-sm font-semibold active:scale-95"
-                            size="lg"
-                        >
-                            Get Access to White Paper
-                        </Button>
-                    </form>
+                    <WhitePaperRequestForm />
                 </div>
             </section>
 

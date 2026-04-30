@@ -1,5 +1,5 @@
+import { ContactForm } from "@/components/contact/ContactForm";
 import { TrustBar } from "@/components/sections/TrustBar";
-import { Button } from "@/components/ui/Button";
 
 export default function ContactUsPage() {
     return (
@@ -27,79 +27,7 @@ export default function ContactUsPage() {
                                 will reach out shortly.
                             </p>
                         </div>
-                        <form className="space-y-6" action="#" method="post">
-                            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                                <div className="space-y-2">
-                                    <label
-                                        className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                        htmlFor="contact-name"
-                                    >
-                                        Name
-                                    </label>
-                                    <input
-                                        id="contact-name"
-                                        name="name"
-                                        type="text"
-                                        placeholder="Jane Doe"
-                                        autoComplete="name"
-                                        className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                                    />
-                                </div>
-                                <div className="space-y-2">
-                                    <label
-                                        className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                        htmlFor="contact-email"
-                                    >
-                                        Email
-                                    </label>
-                                    <input
-                                        id="contact-email"
-                                        name="email"
-                                        type="email"
-                                        placeholder="jane@organization.com"
-                                        autoComplete="email"
-                                        className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                                    />
-                                </div>
-                            </div>
-                            <div className="space-y-2">
-                                <label
-                                    className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                    htmlFor="contact-org"
-                                >
-                                    Org
-                                </label>
-                                <input
-                                    id="contact-org"
-                                    name="organization"
-                                    type="text"
-                                    placeholder="Health System or Payer Name"
-                                    className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                                />
-                            </div>
-                            <div className="space-y-2">
-                                <label
-                                    className="block px-1 text-xs font-semibold tracking-wider text-on-surface"
-                                    htmlFor="contact-message"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    id="contact-message"
-                                    name="message"
-                                    rows={5}
-                                    placeholder="Tell us about your current challenges..."
-                                    className="w-full resize-none rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
-                                />
-                            </div>
-                            <Button
-                                type="submit"
-                                className="w-full py-4 text-sm font-semibold active:scale-95"
-                                size="lg"
-                            >
-                                Inquiry Submission
-                            </Button>
-                        </form>
+                        <ContactForm />
                     </section>
 
                     <aside className="space-y-5 lg:col-span-5">

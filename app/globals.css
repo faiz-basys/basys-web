@@ -225,6 +225,28 @@ body {
   }
 }
 
+/* Career page — orbital hiring illustration */
+@keyframes career-orbit-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes career-orbit-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+}
+
 @layer utilities {
   .animate-hero-fade-up {
     animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -278,6 +300,15 @@ body {
   .animate-news-updates-fourth-reveal {
     animation: news-updates-fourth-reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
+  .animate-career-orbit-slow {
+    animation: career-orbit-slow 48s linear infinite;
+  }
+  .animate-career-orbit-counter {
+    animation: career-orbit-slow 48s linear infinite reverse;
+  }
+  .animate-career-orbit-ring {
+    animation: career-orbit-ring 6s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -315,5 +346,10 @@ body {
   }
   .animate-hero-orb {
     transform: none;
+  }
+  .animate-career-orbit-slow,
+  .animate-career-orbit-counter,
+  .animate-career-orbit-ring {
+    animation: none !important;
   }
 }
