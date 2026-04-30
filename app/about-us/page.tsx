@@ -93,7 +93,7 @@ const MANAGEMENT_TEAM: Person[] = [
         name: "Tobias Lorch",
         role: "Vice President of Product & Operations",
         bio: "Tobi is a healthcare operations leader with deep experience in high-stakes environments. He engineered global standard data systems for the WHO's Ebola and COVID-19 responses. A Harvard MPH graduate and Kennedy School Cheng Fellow, he now drives AI product development and operational strategy at basys.ai.",
-        imageSrc: "/people/tobias-lorch.jpeg",
+        imageSrc: "/people/tobias-lorch.jpg",
         imageAlt: "Portrait of Tobias Lorch.",
         linkedinUrl: "https://www.linkedin.com/in/tobilorch/",
     },
