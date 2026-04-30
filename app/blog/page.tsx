@@ -1,3 +1,4 @@
+import { GeneralNewsletterCtaSection } from "@/components/newsletter/GeneralNewsletterCtaSection";
 import { Button } from "@/components/ui/Button";
 
 export default function BlogPage() {
@@ -174,6 +175,11 @@ export default function BlogPage() {
                     </span>
                 </button>
             </div>
+
+            <GeneralNewsletterCtaSection
+                title="Never miss an insight"
+                description="Subscribe for new articles on agentic AI, policy, and clinical operations — plus occasional company updates."
+            />
         </main>
     );
 }

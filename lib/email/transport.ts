@@ -60,6 +60,13 @@ export function getWhitepaperRecipient(): string | undefined {
     );
 }
 
+/** Internal alert when someone joins a Sendy list from the site. NEWSLETTER_NOTIFY_TO, or same as contact/communications. */
+export function getNewsletterSubscriberNotifyRecipient(): string | undefined {
+    return (
+        process.env.NEWSLETTER_NOTIFY_TO?.trim() || getContactRecipient()
+    );
+}
+
 export function isCareersMailConfigured(): boolean {
     return Boolean(
         process.env.SMTP_HOST?.trim() && getCareersRecipient(),
@@ -75,5 +82,12 @@ export function isContactMailConfigured(): boolean {
 export function isWhitepaperMailConfigured(): boolean {
     return Boolean(
         process.env.SMTP_HOST?.trim() && getWhitepaperRecipient(),
+    );
+}
+
+export function isNewsletterNotifyMailConfigured(): boolean {
+    return Boolean(
+        process.env.SMTP_HOST?.trim() &&
+            getNewsletterSubscriberNotifyRecipient(),
     );
 }

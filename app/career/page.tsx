@@ -1,3 +1,4 @@
+import { NewsletterSignupForm } from "@/components/newsletter/NewsletterSignupForm";
 import { CareerHiringHero } from "@/components/sections/CareerHiringHero";
 import { Button } from "@/components/ui/Button";
 import { GENERAL_APPLICATION_SLUG, jobRoles } from "@/lib/career/jobs";
@@ -268,16 +269,7 @@ export default function CareerPage() {
                         Be the first to hear about clinical and technical
                         openings as we scale.
                     </p>
-                    <div className="mx-auto mt-8 flex max-w-md flex-col gap-2 sm:flex-row">
-                        <input
-                            type="email"
-                            placeholder="Email Address"
-                            className="grow rounded-pill border-none px-6 py-3 text-sm focus:ring-2 focus:ring-primary"
-                        />
-                        <Button className="px-8 py-3 uppercase">
-                            Subscribe
-                        </Button>
-                    </div>
+                    <NewsletterSignupForm variant="career" />
                 </div>
             </section>
         </main>

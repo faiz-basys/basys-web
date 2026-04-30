@@ -1,3 +1,4 @@
+import { GeneralNewsletterCtaSection } from "@/components/newsletter/GeneralNewsletterCtaSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 import { Button } from "@/components/ui/Button";
 
@@ -185,6 +186,10 @@ export default function NewsPage() {
                     </span>
                 </button>
             </div>
+            <GeneralNewsletterCtaSection
+                title="Stay in the loop"
+                description="Get basys.ai announcements, press highlights, and product news — occasional emails, no clutter."
+            />
             <FinalCtaSection />
         </main>
     );
