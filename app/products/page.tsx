@@ -44,12 +44,12 @@ const products = [
         className: "md:col-span-4 min-h-[400px]",
     },
     {
-        icon: "construction",
-        title: "More products in development",
+        icon: "corporate_fare",
+        title: "Custom solutions for your enterprise",
         description:
-            "Additional Basys capabilities are on the way-including deeper interoperability, embedded workflows, and partner integrations. Reach out if you want early visibility or to influence what ships next.",
-        ctaLabel: "COMING SOON",
-        comingSoon: true,
+            "When your requirements go beyond our core products, Basys can design and build tailored AI, integrations, and workflows for your environment-handling policy logic, EHR and data connections, and deployment models that meet your compliance and operations needs.",
+        ctaLabel: "CONTACT SALES",
+        href: "/contact-us",
         className: "md:col-span-4 min-h-[400px] bg-surface-container-high",
     },
 ];

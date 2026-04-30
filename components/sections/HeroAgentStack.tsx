@@ -5,8 +5,23 @@ import {
     useEffect,
     useRef,
     useState,
+    useSyncExternalStore,
     type CSSProperties,
 } from "react";
+
+function subscribeReducedMotionHero(cb: () => void) {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    mq.addEventListener("change", cb);
+    return () => mq.removeEventListener("change", cb);
+}
+
+function getReducedMotionSnapshotHero() {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function getReducedMotionServerSnapshotHero() {
+    return false;
+}
 
 /** Front-card inference bar fills 0→100% over this duration (keep in sync with progress hook) */
 const PROCESSING_MS = 5_800;
@@ -228,15 +243,11 @@ function layerOuterStyle(depth: 0 | 1 | 2): CSSProperties {
 }
 
 function usePrefersReducedMotion(): boolean {
-    const [reduced, setReduced] = useState(false);
-    useEffect(() => {
-        const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-        setReduced(mq.matches);
-        const onChange = () => setReduced(mq.matches);
-        mq.addEventListener("change", onChange);
-        return () => mq.removeEventListener("change", onChange);
-    }, []);
-    return reduced;
+    return useSyncExternalStore(
+        subscribeReducedMotionHero,
+        getReducedMotionSnapshotHero,
+        getReducedMotionServerSnapshotHero,
+    );
 }
 
 /** Drives 0→100% bar on the active front card in sync with PROCESSING_MS */
@@ -254,21 +265,16 @@ function useLiveProcessingProgress(
 
     useEffect(() => {
         if (phase === "completed") {
-            setProgress(100);
-            return;
-        }
-        if (phase !== "processing") {
-            setProgress(0);
             return;
         }
 
         if (frontSlotHiddenForHandoff) {
-            setProgress(0);
+            queueMicrotask(() => setProgress(0));
             return;
         }
 
         if (reducedMotion) {
-            setProgress(0);
+            queueMicrotask(() => setProgress(0));
             const steps = 12;
             const intervalMs = Math.max(100, Math.floor(PROCESSING_MS / steps));
             let i = 0;
@@ -280,7 +286,7 @@ function useLiveProcessingProgress(
             return () => clearInterval(id);
         }
 
-        setProgress(0);
+        queueMicrotask(() => setProgress(0));
         const start = performance.now();
         let cancelled = false;
         const loop = () => {
@@ -296,7 +302,7 @@ function useLiveProcessingProgress(
         };
     }, [phase, reducedMotion, frontSlotHiddenForHandoff]);
 
-    return progress;
+    return phase === "completed" ? 100 : progress;
 }
 
 /** Snapshot card that exited - animates down via CSS, unmount when done (never rejoins front slot here) */
@@ -599,8 +605,6 @@ function AgentStackLayer({
 export function HeroAgentStack() {
     const reducedMotion = usePrefersReducedMotion();
     const [order, setOrder] = useState<[number, number, number]>([0, 1, 2]);
-    const orderRef = useRef(order);
-    orderRef.current = order;
 
     const [phase, setPhase] = useState<Phase>("processing");
     /** Case index that is sliding out on the detached flyout (not in stack layout) */
@@ -722,12 +726,12 @@ export function HeroAgentStack() {
         clearStackShiftTimeout();
         clearPostFlyoutPauseTimeout();
 
-        const [a, b, c] = orderRef.current;
+        const [a, b, c] = order;
         pendingOrderRef.current = [b, c, a];
         setHiddenFrontCaseIndex(a);
         setFlyoutCaseIndex(a);
         setPhase("processing");
-    }, [clearStackShiftTimeout, clearPostFlyoutPauseTimeout]);
+    }, [order, clearStackShiftTimeout, clearPostFlyoutPauseTimeout]);
 
     const runReducedHandoff = useCallback(() => {
         setOrder(([a, b, c]) => [b, c, a]);

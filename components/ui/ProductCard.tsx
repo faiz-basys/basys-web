@@ -81,7 +81,7 @@ export function ProductCard({
 
                     {previewImageUrl ? (
                         <div className="hidden h-32 w-64 overflow-hidden rounded-2xl border border-outline/5 bg-surface-container lg:block">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            { }
                             <Image
                                 className="h-full w-full object-cover opacity-60"
                                 src={previewImageUrl}

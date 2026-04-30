@@ -106,21 +106,29 @@ export function EhrSyncFeed() {
     );
     const [slideY, setSlideY] = useState(0);
 
-    rowsRef.current = rows;
+    const bottomRow = rows[2];
+    const bottomKey = bottomRow?.key ?? -1;
+    const bottomPhase = bottomRow?.phase;
+
+    useEffect(() => {
+        rowsRef.current = rows;
+    }, [rows]);
 
     // Bottom row: FHIR pull → Synced after PULL_MS
     useEffect(() => {
-        const bottom = rows[2];
-        if (!bottom || bottom.phase !== "pulling") return;
+        if (bottomPhase !== "pulling") return;
         const t = window.setTimeout(() => {
-            setRows((prev) =>
-                prev.map((r, i) =>
+            setRows((prev) => {
+                const b = prev[2];
+                if (!b || b.key !== bottomKey || b.phase !== "pulling")
+                    return prev;
+                return prev.map((r, i) =>
                     i === 2 ? { ...r, phase: "synced" as const } : r,
-                ),
-            );
+                );
+            });
         }, PULL_MS);
         return () => window.clearTimeout(t);
-    }, [rows[2]?.key, rows[2]?.phase]);
+    }, [bottomKey, bottomPhase]);
 
     // After bottom finishes pulling → synced: schedule scroll (not instant row swap)
     useEffect(() => {
@@ -174,9 +182,12 @@ export function EhrSyncFeed() {
         ).matches;
 
         if (reduceMotion) {
-            setRows(pendingScroll.after);
-            setPendingScroll(null);
-            setSlideY(0);
+            const after = pendingScroll.after;
+            queueMicrotask(() => {
+                setRows(after);
+                setPendingScroll(null);
+                setSlideY(0);
+            });
             return;
         }
 

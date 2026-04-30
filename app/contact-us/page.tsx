@@ -7,7 +7,7 @@ export default function ContactUsPage() {
             <div className="mx-auto max-w-7xl px-8 mb-20">
                 <header className="mb-16">
                     <h1 className="mb-4 text-5xl font-bold text-primary">
-                        Precision Intelligence, Human Connection.
+                        Get in touch
                     </h1>
                     <p className="max-w-2xl text-lg text-on-surface-variant">
                         Connect with our team to explore how basys.ai can
@@ -103,33 +103,6 @@ export default function ContactUsPage() {
                     </section>
 
                     <aside className="space-y-5 lg:col-span-5">
-                        <div className="flex aspect-square flex-col justify-between rounded-4xl bg-primary p-8 text-on-primary lg:aspect-auto">
-                            <div>
-                                <div className="mb-4 flex items-center gap-2">
-                                    <span className="material-symbols-outlined text-on-primary">
-                                        calendar_today
-                                    </span>
-                                    <span className="text-xs font-semibold tracking-widest opacity-80 uppercase">
-                                        Immediate Scheduling
-                                    </span>
-                                </div>
-                                <h2 className="mb-4 text-3xl leading-tight font-semibold">
-                                    Book a Demo With Our Product Engineers
-                                </h2>
-                                <p className="mb-8 text-sm opacity-70">
-                                    Skip the wait. Select a time that works for
-                                    your team to see basys.ai in action.
-                                </p>
-                            </div>
-                            <Button
-                                variant="light"
-                                className="w-full py-3 text-sm font-semibold active:scale-95"
-                                size="lg"
-                            >
-                                Request a Demo
-                            </Button>
-                        </div>
-
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-1">
                             <div className="rounded-4xl border border-black/5 bg-secondary-container p-6">
                                 <h3 className="mb-4 text-xs font-semibold tracking-widest text-on-secondary-container uppercase">

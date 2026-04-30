@@ -355,7 +355,7 @@ export default function ProviderPage() {
                     </div>
 
                     <div className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-4xl border border-outline/5 bg-surface-container md:w-1/3">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        { }
                         <Image
                             className="h-full w-full object-cover"
                             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMDGr4gh9NtLMsRFzdJFY4fxr-fQfmbpV9udQxANYKHYQDfyODzq2kiHqn9tmx_Fl9UrKLiGPf--wbLpwOh15w6F3ZQ7PCm-n1bHJiQ4MgJnjPL7cCQmWKnvheS7H2G1CtutwlVXpXp_6DcyfIKgk1Ct9Bzu9K2OaMgdknImQ_k6QS7SRI9F2stdt2RRdVzkt1-7gm729KU6-KZwPcZWTJg0Bx_aES0HqjeDJMNpqxFkMM6wkOJXo9FMTrxOk-ktKcge_Sf977gBg"

@@ -33,7 +33,7 @@ export function TrustBar() {
                             href={url}
                             className="text-xl font-semibold tracking-tight md:text-2xl"
                         >
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            { }
                             <Image
                                 src={logo}
                                 alt={title}

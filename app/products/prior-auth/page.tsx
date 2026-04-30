@@ -77,7 +77,7 @@ export default function PriorAuthProductPage() {
 
                     <div className="relative">
                         <div className="absolute -inset-4 -z-10 rounded-[3rem] bg-surface-container" />
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        { }
                         <Image
                             alt="Clinical workflow and authorization review"
                             className="h-[400px] w-full rounded-4xl border border-outline/10 object-cover shadow-sm"

@@ -91,10 +91,31 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
             <TrustBar />
 
             <NewsUpdatesSection />
+
+            {/* White paper */}
+            <section className="border-t border-outline/10 px-8 py-20">
+                <div className="mx-auto max-w-7xl">
+                    <div className="mx-auto max-w-3xl rounded-4xl border border-outline/10 bg-surface-container-lowest p-10 text-center md:p-14">
+                        <Badge icon="menu_book" title="WHITE PAPER" />
+                        <h2 className="mt-6 text-3xl font-bold text-primary md:text-4xl">
+                            Reimagine Prior Authorization
+                        </h2>
+                        <p className="mt-4 text-lg text-on-surface-variant">
+                            A strategic look at agentic AI for health plans:
+                            lower cost, faster decisions, and stronger provider
+                            trust.
+                        </p>
+                        <div className="mt-8 flex justify-center">
+                            <Button href="/white-paper-preview" size="lg">
+                                View white paper preview
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Value props */}
             <section className="bg-surface-container-low py-24">
