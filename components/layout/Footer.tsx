@@ -1,85 +1,131 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const footerLinks = [
-    {
-        title: "Home",
-        url: "/",
-        showInNavbar: true,
-    },
-    {
-        title: "Products",
-        url: "/products",
-        showInNavbar: true,
-    },
-    {
-        title: "Payer",
-        url: "/payer",
-        showInNavbar: true,
-    },
-    {
-        title: "Provider",
-        url: "/provider",
-        showInNavbar: true,
-    },
-    {
-        title: "Technology",
-        url: "/technology",
-        showInNavbar: true,
-    },
-    {
-        title: "About Us",
-        url: "/about-us",
-    },
-    {
-        title: "News",
-        url: "/news",
-    },
-    {
-        title: "Career",
-        url: "/career",
-    },
-    {
-        title: "Blog",
-        url: "/blog",
-    },
-    {
-        title: "Contact Us",
-        url: "/contact-us",
-    },
-];
+const footerGroups: { title: string; links: { title: string; url: string }[] }[] =
+    [
+        {
+            title: "Platform",
+            links: [
+                { title: "Products", url: "/products" },
+                { title: "Payer", url: "/payer" },
+                { title: "Provider", url: "/provider" },
+                { title: "Technology", url: "/technology" },
+            ],
+        },
+        {
+            title: "Company",
+            links: [
+                { title: "About Us", url: "/about-us" },
+                { title: "News", url: "/news" },
+                { title: "Career", url: "/career" },
+                { title: "Blog", url: "/blog" },
+            ],
+        },
+        {
+            title: "Resources",
+            links: [
+                { title: "Contact", url: "/contact-us" },
+                { title: "Rate Card", url: "/rate-card" },
+            ],
+        },
+    ];
+
+const SUPPORT_EMAIL = "communication@basys.ai";
 
 export function Footer() {
     return (
-        <footer className="border-t border-slate-200 bg-slate-50">
-            <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-end gap-8 px-8 py-12 md:grid-cols-2">
-                <div className="space-y-6">
-                    <div className="mb-6">
-                        <Link href="/">
+        <footer className="relative overflow-hidden border-t border-outline-variant/60 bg-surface-container-low">
+            <div
+                className="pointer-events-none absolute inset-0 opacity-[0.4]"
+                aria-hidden
+                style={{
+                    backgroundImage: `
+                        linear-gradient(90deg, rgb(0 0 0 / 0.04) 1px, transparent 1px),
+                        linear-gradient(rgb(0 0 0 / 0.04) 1px, transparent 1px)
+                    `,
+                    backgroundSize: "56px 56px",
+                    maskImage:
+                        "linear-gradient(to bottom, black 0%, black 40%, transparent 100%)",
+                    WebkitMaskImage:
+                        "linear-gradient(to bottom, black 0%, black 40%, transparent 100%)",
+                }}
+            />
+
+            <div className="relative mx-auto max-w-7xl px-8 pt-16 pb-10 md:pt-20 md:pb-12">
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
+                    <div className="lg:col-span-4">
+                        <Link href="/" className="inline-block">
                             <Image
                                 src="/logo.png"
-                                alt="Basys Logo"
-                                width={100}
-                                height={100}
+                                alt="Basys"
+                                width={112}
+                                height={112}
+                                className="h-10 w-auto"
                             />
                         </Link>
-                    </div>
-                    <nav className="flex flex-wrap gap-x-8 gap-y-4">
-                        {footerLinks.map((link) => (
-                            <Link
-                                key={link.title}
-                                href={link.url}
-                                className="text-xs uppercase tracking-widest text-slate-500 transition-colors hover:text-slate-950"
+                        <p className="mt-6 max-w-sm text-sm leading-relaxed text-on-surface-variant">
+                            Enterprise-grade AI agents for prior authorization and
+                            clinical workflows—built for health plans and provider
+                            networks.
+                        </p>
+                        <a
+                            href={`mailto:${SUPPORT_EMAIL}`}
+                            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-on-surface-variant"
+                        >
+                            <span
+                                className="material-symbols-outlined text-[1.25rem] text-outline"
+                                aria-hidden
                             >
-                                {link.title}
-                            </Link>
+                                mail
+                            </span>
+                            {SUPPORT_EMAIL}
+                        </a>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-8 lg:gap-8">
+                        {footerGroups.map((group) => (
+                            <div key={group.title}>
+                                <h2 className="text-xs font-semibold tracking-[0.2em] text-outline uppercase">
+                                    {group.title}
+                                </h2>
+                                <ul className="mt-5 space-y-3">
+                                    {group.links.map((link) => (
+                                        <li key={link.title}>
+                                            <Link
+                                                href={link.url}
+                                                className="text-sm font-medium text-on-surface transition-colors hover:text-primary"
+                                            >
+                                                {link.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         ))}
-                    </nav>
+                    </div>
                 </div>
-                <div className="md:text-right">
-                    <p className="text-xs tracking-widest text-slate-500">
-                        © 2026 basys.ai. All rights reserved.
+
+                <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-outline-variant/50 pt-8 md:flex-row md:items-center">
+                    <p className="text-xs text-on-surface-variant">
+                        © {new Date().getFullYear()} basys.ai. All rights reserved.
                     </p>
+                    <nav
+                        className="flex flex-wrap gap-x-6 gap-y-2"
+                        aria-label="Footer shortcuts"
+                    >
+                        <Link
+                            href="/"
+                            className="text-xs font-medium text-on-surface-variant transition-colors hover:text-primary"
+                        >
+                            Home
+                        </Link>
+                        <Link
+                            href="/contact-us"
+                            className="text-xs font-medium text-on-surface-variant transition-colors hover:text-primary"
+                        >
+                            Request a Demo
+                        </Link>
+                    </nav>
                 </div>
             </div>
         </footer>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ButtonHTMLAttributes } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
 type ButtonVariant = "primary" | "outline" | "light";
 type ButtonSize = "md" | "lg";
@@ -29,6 +29,8 @@ export function Button({
     size = "md",
     type = "button",
     href,
+    onClick,
+    children,
     ...props
 }: ButtonProps) {
     if (href) {
@@ -36,8 +38,13 @@ export function Button({
             <Link
                 href={href}
                 className={`rounded-pill transition-all duration-200 hover:cursor-pointer ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+                onClick={
+                    onClick as
+                        | AnchorHTMLAttributes<HTMLAnchorElement>["onClick"]
+                        | undefined
+                }
             >
-                {props.children}
+                {children}
             </Link>
         );
     }
@@ -45,7 +52,10 @@ export function Button({
         <button
             type={type}
             className={`rounded-pill transition-all duration-200 hover:cursor-pointer ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
+            onClick={onClick}
             {...props}
-        />
+        >
+            {children}
+        </button>
     );
 }
