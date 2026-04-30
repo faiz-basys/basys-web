@@ -247,6 +247,84 @@ body {
   }
 }
 
+/* Product pages — MRR hero (document scan + validation chips, no grid) */
+@keyframes mrr-stack-shift {
+  0%,
+  100% {
+    transform: rotate(-2deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(-2deg) translate(-5px, 3px);
+  }
+}
+
+@keyframes mrr-scan-line {
+  0% {
+    top: -15%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    top: 92%;
+    opacity: 0;
+  }
+}
+
+@keyframes mrr-chip-wave {
+  0%,
+  45%,
+  100% {
+    border-color: rgb(198 198 205 / 0.35);
+    box-shadow: none;
+    opacity: 0.88;
+  }
+  10%,
+  20% {
+    border-color: rgb(0 0 0 / 0.22);
+    box-shadow: 0 10px 28px -10px rgb(0 0 0 / 0.14);
+    opacity: 1;
+  }
+}
+
+@keyframes mrr-pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+/* Prior auth hero — curved path emphasis */
+@keyframes pa-flow-stroke {
+  from {
+    stroke-dashoffset: 420;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pa-batch-pill {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: translateY(3px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer utilities {
   .animate-hero-fade-up {
     animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -309,6 +387,24 @@ body {
   .animate-career-orbit-ring {
     animation: career-orbit-ring 6s ease-in-out infinite;
   }
+  .animate-mrr-stack-shift {
+    animation: mrr-stack-shift 5s ease-in-out infinite;
+  }
+  .animate-mrr-scan-line {
+    animation: mrr-scan-line 4.2s ease-in-out infinite;
+  }
+  .animate-mrr-chip-wave {
+    animation: mrr-chip-wave 4.5s ease-in-out infinite;
+  }
+  .animate-mrr-pulse-dot {
+    animation: mrr-pulse-dot 1.4s ease-in-out infinite;
+  }
+  .animate-pa-flow-stroke {
+    animation: pa-flow-stroke 3.2s linear infinite;
+  }
+  .animate-pa-batch-pill {
+    animation: pa-batch-pill 2.8s ease-in-out infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -351,5 +447,17 @@ body {
   .animate-career-orbit-counter,
   .animate-career-orbit-ring {
     animation: none !important;
+  }
+  .animate-mrr-stack-shift,
+  .animate-mrr-scan-line,
+  .animate-mrr-chip-wave,
+  .animate-mrr-pulse-dot,
+  .animate-pa-flow-stroke,
+  .animate-pa-batch-pill {
+    animation: none !important;
+  }
+  .animate-pa-batch-pill {
+    opacity: 1;
+    transform: none;
   }
 }
