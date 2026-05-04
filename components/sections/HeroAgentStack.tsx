@@ -288,18 +288,16 @@ function useLiveProcessingProgress(
 
         queueMicrotask(() => setProgress(0));
         const start = performance.now();
-        let cancelled = false;
-        const loop = () => {
-            if (cancelled) return;
+        /** Use setInterval (not rAF) so the bar keeps advancing after SPA navigation /
+         * bfcache restore; requestAnimationFrame can stop scheduling reliably in those cases. */
+        const tickMs = Math.max(16, Math.floor(1000 / 60));
+        const id = window.setInterval(() => {
             const elapsed = performance.now() - start;
             const p = Math.min(100, (elapsed / PROCESSING_MS) * 100);
             setProgress(p);
-            if (p < 100 && !cancelled) requestAnimationFrame(loop);
-        };
-        requestAnimationFrame(loop);
-        return () => {
-            cancelled = true;
-        };
+            if (p >= 100) window.clearInterval(id);
+        }, tickMs);
+        return () => window.clearInterval(id);
     }, [phase, reducedMotion, frontSlotHiddenForHandoff]);
 
     return phase === "completed" ? 100 : progress;
@@ -668,6 +666,36 @@ export function HeroAgentStack() {
             postFlyoutPauseTimeoutRef.current = null;
         }
     }, []);
+
+    /** bfcache restore can leave timers / animation drivers stale; reset the whole demo. */
+    useEffect(() => {
+        const onPageShow = (e: PageTransitionEvent) => {
+            if (!e.persisted) return;
+            clearNewBackPopTimeout();
+            clearSnapResetTimeout();
+            clearFlyoutFallback();
+            clearStackShiftTimeout();
+            clearPostFlyoutPauseTimeout();
+            pendingOrderRef.current = null;
+            handoffFinishedRef.current = false;
+            setOrder([0, 1, 2]);
+            setPhase("processing");
+            setFlyoutCaseIndex(null);
+            setHiddenFrontCaseIndex(null);
+            setHideBackSlot(false);
+            setNewBackPop(false);
+            setSnapTransforms(false);
+            setStackShiftSlow(false);
+        };
+        window.addEventListener("pageshow", onPageShow);
+        return () => window.removeEventListener("pageshow", onPageShow);
+    }, [
+        clearNewBackPopTimeout,
+        clearSnapResetTimeout,
+        clearFlyoutFallback,
+        clearStackShiftTimeout,
+        clearPostFlyoutPauseTimeout,
+    ]);
 
     const finishHandoffReveal = useCallback(() => {
         if (handoffFinishedRef.current) return;
