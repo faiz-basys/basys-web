@@ -3,6 +3,7 @@
 import type { WhitepaperFormState } from "@/app/white-paper-preview/actions";
 import { submitWhitepaperRequest } from "@/app/white-paper-preview/actions";
 import { Button } from "@/components/ui/Button";
+import { WHITE_PAPER_FORM_OPTIONS } from "@/components/white-paper/white-paper-data";
 import { useActionState } from "react";
 
 const initialState: WhitepaperFormState = {
@@ -92,6 +93,51 @@ export function WhitePaperRequestForm() {
                     </p>
                 ) : null}
             </div>
+            <fieldset
+                className="space-y-3"
+                aria-describedby={
+                    state.fieldErrors?.whitepapers
+                        ? "wp-whitepapers-err"
+                        : undefined
+                }
+            >
+                <legend className="block px-1 text-xs font-semibold tracking-wider text-on-surface">
+                    Which whitepaper(s) do you need?
+                </legend>
+                <div className="space-y-2">
+                    {WHITE_PAPER_FORM_OPTIONS.map((option) => (
+                        <label
+                            key={option.id}
+                            className="flex cursor-pointer items-start gap-3 rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 transition-colors has-checked:border-primary has-checked:bg-surface-container-low has-checked:ring-2 has-checked:ring-primary"
+                        >
+                            <input
+                                type="checkbox"
+                                name="whitepapers"
+                                value={option.id}
+                                className="mt-0.5 size-4 shrink-0 accent-primary"
+                            />
+                            <span className="min-w-0">
+                                <span className="block text-sm font-semibold text-primary">
+                                    {option.label}
+                                </span>
+                                <span className="mt-0.5 block text-xs leading-relaxed text-on-surface-variant">
+                                    {option.description}
+                                </span>
+                            </span>
+                        </label>
+                    ))}
+                </div>
+                {state.fieldErrors?.whitepapers ? (
+                    <p
+                        id="wp-whitepapers-err"
+                        className="px-1 text-xs text-red-700"
+                        role="alert"
+                    >
+                        {state.fieldErrors.whitepapers}
+                    </p>
+                ) : null}
+            </fieldset>
+
             <div className="space-y-2">
                 <label
                     className="block px-1 text-xs font-semibold tracking-wider text-on-surface"

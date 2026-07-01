@@ -4,6 +4,7 @@ import {
     emailMailtoLink,
     emailMutedNote,
 } from "@/lib/email/htmlTemplate";
+import { WHITE_PAPERS } from "@/components/white-paper/white-paper-data";
 import {
     createSmtpTransport,
     escapeHtml,
@@ -15,7 +16,14 @@ export type WhitepaperRequestPayload = {
     name: string;
     email: string;
     organization: string;
+    whitepapers: string[];
 };
+
+function formatWhitepaperLabels(ids: string[]): string {
+    return ids
+        .map((id) => WHITE_PAPERS.find((paper) => paper.id === id)?.title ?? id)
+        .join(", ");
+}
 
 export async function sendWhitepaperRequestEmail(
     payload: WhitepaperRequestPayload,
@@ -28,6 +36,8 @@ export async function sendWhitepaperRequestEmail(
     const from = getMailFromAddress(to);
     const replyTo = payload.email;
 
+    const whitepaperLabels = formatWhitepaperLabels(payload.whitepapers);
+
     const text = [
         `White paper access request (basys.ai /white-paper-preview)`,
         ``,
@@ -36,6 +46,7 @@ export async function sendWhitepaperRequestEmail(
         payload.organization.trim()
             ? `Organization: ${payload.organization.trim()}`
             : `(No organization provided)`,
+        `Requested whitepapers: ${whitepaperLabels}`,
         ``,
         `Follow up with the PDF or download link as per your process.`,
     ].join("\n");
@@ -52,6 +63,10 @@ export async function sendWhitepaperRequestEmail(
                 ? escapeHtml(payload.organization.trim())
                 : `<span style="color:#858382;font-size:13px;font-style:italic;">Not provided</span>`,
         },
+        {
+            label: "Whitepapers",
+            valueHtml: escapeHtml(whitepaperLabels),
+        },
     ];
 
     const contentHtml = `
@@ -63,7 +78,7 @@ ${emailMutedNote("Requested from /white-paper-preview · Follow up with the full
         badgeLabel: "White paper",
         title: "Access request",
         subtitle:
-            "Someone requested the prior authorization white paper on basys.ai.",
+            "Someone requested white paper access on basys.ai.",
         contentHtml,
         footerNote:
             "Reply to this email to reach the requester. Send the asset your team uses for this campaign.",
@@ -75,7 +90,7 @@ ${emailMutedNote("Requested from /white-paper-preview · Follow up with the full
         from,
         to,
         replyTo,
-        subject: `[White paper] ${payload.name} — prior authorization`,
+        subject: `[White paper] ${payload.name} — ${whitepaperLabels}`,
         text,
         html,
     });
