@@ -101,18 +101,19 @@ export default function Home() {
             <section className="border-t border-outline/10 px-8 py-20">
                 <div className="mx-auto max-w-7xl">
                     <div className="mx-auto max-w-3xl rounded-4xl border border-outline/10 bg-surface-container-lowest p-10 text-center md:p-14">
-                        <Badge icon="menu_book" title="WHITE PAPER" />
+                        <Badge icon="menu_book" title="WHITE PAPERS" />
                         <h2 className="mt-6 text-3xl font-bold text-primary md:text-4xl">
-                            Reimagine Prior Authorization
+                            Research &amp; Insights for Health Plans
                         </h2>
                         <p className="mt-4 text-lg text-on-surface-variant">
-                            A strategic look at agentic AI for health plans:
-                            lower cost, faster decisions, and stronger provider
-                            trust.
+                            Explore our whitepapers on payment integrity, fraud
+                            waste &amp; abuse, and agentic prior
+                            authorization—physician-first AI built for trust,
+                            transparency, and measurable outcomes.
                         </p>
                         <div className="mt-8 flex justify-center">
-                            <Button href="/white-paper-preview" size="lg">
-                                View white paper preview
+                            <Button href="/white-papers" size="lg">
+                                View whitepapers
                             </Button>
                         </div>
                     </div>

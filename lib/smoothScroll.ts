@@ -38,3 +38,18 @@ export function smoothScrollToTop(): void {
         window.history.replaceState(null, "", window.location.pathname);
     }
 }
+
+/** Scroll `item` into view inside `container` without moving the page. */
+export function scrollElementWithinContainer(
+    container: HTMLElement,
+    item: HTMLElement,
+): void {
+    const containerRect = container.getBoundingClientRect();
+    const itemRect = item.getBoundingClientRect();
+
+    if (itemRect.top < containerRect.top) {
+        container.scrollTop -= containerRect.top - itemRect.top;
+    } else if (itemRect.bottom > containerRect.bottom) {
+        container.scrollTop += itemRect.bottom - containerRect.bottom;
+    }
+}

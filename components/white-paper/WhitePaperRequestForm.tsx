@@ -1,7 +1,7 @@
 "use client";
 
-import type { WhitepaperFormState } from "@/app/white-paper-preview/actions";
-import { submitWhitepaperRequest } from "@/app/white-paper-preview/actions";
+import type { WhitepaperFormState } from "@/app/white-papers/actions";
+import { submitWhitepaperRequest } from "@/app/white-papers/actions";
 import { Button } from "@/components/ui/Button";
 import { WHITE_PAPER_FORM_OPTIONS } from "@/components/white-paper/white-paper-data";
 import { useActionState } from "react";
@@ -22,7 +22,9 @@ export function WhitePaperRequestForm() {
                 <span className="material-symbols-outlined mb-4 inline-block text-5xl text-primary">
                     check_circle
                 </span>
-                <p className="text-lg font-semibold text-primary">{state.message}</p>
+                <p className="text-lg font-semibold text-primary">
+                    {state.message}
+                </p>
             </div>
         );
     }
@@ -154,7 +156,9 @@ export function WhitePaperRequestForm() {
                     className="w-full rounded-2xl border border-outline-variant bg-surface-container px-4 py-3 outline-none transition-all focus:border-primary focus:ring-2 focus:ring-primary"
                     aria-invalid={Boolean(state.fieldErrors?.organization)}
                     aria-describedby={
-                        state.fieldErrors?.organization ? "wp-org-err" : undefined
+                        state.fieldErrors?.organization
+                            ? "wp-org-err"
+                            : undefined
                     }
                 />
                 {state.fieldErrors?.organization ? (

@@ -7,7 +7,7 @@ import {
     WHITE_PAPERS,
     type WhitePaper,
 } from "@/components/white-paper/white-paper-data";
-import { smoothScrollToId } from "@/lib/smoothScroll";
+import { scrollElementWithinContainer, smoothScrollToId } from "@/lib/smoothScroll";
 import {
     useCallback,
     useEffect,
@@ -140,6 +140,7 @@ function WhitePaperBlock({
 }) {
     const [activeIndex, setActiveIndex] = useState(0);
     const navRef = useRef<HTMLElement>(null);
+    const skipNavScrollRef = useRef(true);
     const reducedMotion = useSyncExternalStore(
         subscribeReducedMotion,
         getReducedMotionSnapshot,
@@ -151,16 +152,21 @@ function WhitePaperBlock({
     }, []);
 
     useEffect(() => {
+        if (skipNavScrollRef.current) {
+            skipNavScrollRef.current = false;
+            return;
+        }
+
         const nav = navRef.current;
         if (!nav) return;
+
         const activeBtn = nav.querySelector<HTMLElement>(
             '[aria-current="step"]',
         );
-        activeBtn?.scrollIntoView({
-            block: "nearest",
-            behavior: reducedMotion ? "auto" : "smooth",
-        });
-    }, [activeIndex, reducedMotion]);
+        if (!activeBtn) return;
+
+        scrollElementWithinContainer(nav, activeBtn);
+    }, [activeIndex]);
 
     const scrollToSection = (index: number) => {
         smoothScrollToId(`${paper.id}-${paper.sections[index].id}`, {
@@ -171,6 +177,7 @@ function WhitePaperBlock({
     };
 
     const activeSection = paper.sections[activeIndex];
+    const nextPaper = !isLast ? WHITE_PAPERS[paperIndex + 1] : null;
     const progress =
         paper.sections.length <= 1
             ? 100
@@ -296,13 +303,23 @@ function WhitePaperBlock({
                         </nav>
 
                         <div className="mt-4 shrink-0 border-t border-outline/10 pt-4">
-                            <SmoothScrollButton
-                                href="#whitepaper-form"
-                                size="md"
-                                className="w-full justify-center"
-                            >
-                                Get Access
-                            </SmoothScrollButton>
+                            <div className="flex flex-wrap gap-2">
+                                <SmoothScrollButton
+                                    href="#whitepaper-form"
+                                    size="md"
+                                >
+                                    Get Access
+                                </SmoothScrollButton>
+                                {nextPaper ? (
+                                    <SmoothScrollButton
+                                        href={`#${nextPaper.id}`}
+                                        variant="outline"
+                                        size="md"
+                                    >
+                                        Next
+                                    </SmoothScrollButton>
+                                ) : null}
+                            </div>
                         </div>
                     </div>
                 </aside>
@@ -339,6 +356,19 @@ function WhitePaperBlock({
 }
 
 export function WhitePaperScrollExperience() {
+    useEffect(() => {
+        const previousRestoration = window.history.scrollRestoration;
+        window.history.scrollRestoration = "manual";
+
+        if (!window.location.hash) {
+            window.scrollTo(0, 0);
+        }
+
+        return () => {
+            window.history.scrollRestoration = previousRestoration;
+        };
+    }, []);
+
     return (
         <div className="pb-8">
             {WHITE_PAPERS.map((paper, i) => (

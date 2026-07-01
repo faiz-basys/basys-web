@@ -3,16 +3,18 @@ import { TrustBar } from "@/components/sections/TrustBar";
 import { ScrollToTopButton } from "@/components/white-paper/ScrollToTopButton";
 import { WhitePaperRequestForm } from "@/components/white-paper/WhitePaperRequestForm";
 import { WhitePaperScrollExperience } from "@/components/white-paper/WhitePaperScrollExperience";
+import { WhitePapersOverview } from "@/components/white-paper/WhitePapersOverview";
 
 export const metadata: Metadata = {
-    title: "White Paper Preview | basys.ai",
+    title: "White Papers | basys.ai",
     description:
-        "Closing the blind spots in fraud, waste & abuse—and reimagining prior authorization with agentic AI. Interactive whitepaper previews for health plans.",
+        "Research and whitepapers on payment integrity, fraud waste & abuse, and agentic prior authorization for health plans.",
 };
 
-export default function WhitePaperPreviewPage() {
+export default function WhitePapersPage() {
     return (
         <main className="pt-20">
+            <WhitePapersOverview />
             <WhitePaperScrollExperience />
 
             <section
@@ -21,11 +23,11 @@ export default function WhitePaperPreviewPage() {
             >
                 <div className="mx-auto max-w-2xl">
                     <h2 className="text-center text-3xl font-semibold text-primary md:text-4xl">
-                        Ready to Transform Prior Authorization for your Health
-                        Plan?
+                        Request the Full Whitepapers
                     </h2>
                     <p className="mt-4 text-center text-on-surface-variant">
-                        Request the full whitepaper here:
+                        Select the reports you need and our team will follow up
+                        with access.
                     </p>
                     <WhitePaperRequestForm />
                 </div>
