@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 /**
  * Hero illustration: stacked record + scanning highlight + validation strip.
- * Deliberately not a grid or orbit — vertical scan + lateral validation cues.
+ * Deliberately not a grid or orbit - vertical scan + lateral validation cues.
  */
 export function MedicalRecordReviewHeroVisual() {
     const [reduceMotion, setReduceMotion] = useState(false);
@@ -107,18 +107,16 @@ function ValidationChip({
     return (
         <div
             className={`rounded-2xl border border-outline/15 bg-surface-container-lowest/95 px-3 py-2.5 shadow-sm backdrop-blur-sm ${animated ? "animate-mrr-chip-wave" : ""}`}
-            style={
-                animated
-                    ? { animationDelay: `${delayMs}ms` }
-                    : undefined
-            }
+            style={animated ? { animationDelay: `${delayMs}ms` } : undefined}
         >
             <div className="flex items-start gap-2">
                 <span className="material-symbols-outlined mt-0.5 shrink-0 text-base text-primary">
                     {icon}
                 </span>
                 <div className="min-w-0">
-                    <p className="text-xs font-semibold text-primary">{label}</p>
+                    <p className="text-xs font-semibold text-primary">
+                        {label}
+                    </p>
                     <p className="text-[10px] leading-tight text-on-surface-variant">
                         {sub}
                     </p>

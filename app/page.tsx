@@ -108,7 +108,7 @@ export default function Home() {
                         <p className="mt-4 text-lg text-on-surface-variant">
                             Explore our whitepapers on payment integrity, fraud
                             waste &amp; abuse, and agentic prior
-                            authorization—physician-first AI built for trust,
+                            authorization-physician-first AI built for trust,
                             transparency, and measurable outcomes.
                         </p>
                         <div className="mt-8 flex justify-center">

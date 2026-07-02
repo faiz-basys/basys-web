@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps) {
         return { title: "Apply | basys.ai" };
     }
     return {
-        title: `Apply — ${job.title} | basys.ai`,
+        title: `Apply - ${job.title} | basys.ai`,
         description: `Submit your application for ${job.title} at basys.ai.`,
     };
 }

@@ -77,8 +77,7 @@ ${emailMutedNote("Requested from /white-paper-preview · Follow up with the full
     const html = basysEmailDocument({
         badgeLabel: "White paper",
         title: "Access request",
-        subtitle:
-            "Someone requested white paper access on basys.ai.",
+        subtitle: "Someone requested white paper access on basys.ai.",
         contentHtml,
         footerNote:
             "Reply to this email to reach the requester. Send the asset your team uses for this campaign.",
@@ -90,7 +89,7 @@ ${emailMutedNote("Requested from /white-paper-preview · Follow up with the full
         from,
         to,
         replyTo,
-        subject: `[White paper] ${payload.name} — ${whitepaperLabels}`,
+        subject: `[White paper] ${payload.name} - ${whitepaperLabels}`,
         text,
         html,
     });

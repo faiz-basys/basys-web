@@ -1,9 +1,7 @@
 "use server";
 
 import { sendNewsletterSubscriberNotification } from "@/lib/email/sendNewsletterSubscriberNotification";
-import {
-    isNewsletterNotifyMailConfigured,
-} from "@/lib/email/transport";
+import { isNewsletterNotifyMailConfigured } from "@/lib/email/transport";
 import {
     isSendySubscribeSuccess,
     sendySubscribeRequest,
@@ -27,8 +25,7 @@ async function getClientIpAndReferer(): Promise<{
 }> {
     const h = await headers();
     const xff = h.get("x-forwarded-for");
-    const ip =
-        xff?.split(",")[0]?.trim() || h.get("x-real-ip") || undefined;
+    const ip = xff?.split(",")[0]?.trim() || h.get("x-real-ip") || undefined;
     const referer = h.get("referer") || undefined;
     return { ip, referer };
 }
@@ -115,8 +112,7 @@ async function runNewsletterSubscribe(
         }
         return {
             ok: true,
-            message:
-                "Thanks! Check your inbox to confirm your subscription.",
+            message: "Thanks! Check your inbox to confirm your subscription.",
         };
     }
     if (/already subscribed/i.test(text)) {
@@ -140,7 +136,7 @@ export async function subscribeCareerNewsletter(
         listId: process.env.SENDY_JOB_LIST_ID,
         envHint: "SENDY_JOB_LIST_ID",
         alreadyMessage:
-            "You're already subscribed — we'll keep you posted on new roles.",
+            "You're already subscribed - we'll keep you posted on new roles.",
         notifyKind: "career",
         logPrefix: "[career newsletter]",
     });
@@ -154,7 +150,7 @@ export async function subscribeGeneralNewsletter(
         listId: process.env.SENDY_GENERAL_LIST_ID,
         envHint: "SENDY_GENERAL_LIST_ID",
         alreadyMessage:
-            "You're already on our list — we'll share news and insights.",
+            "You're already on our list - we'll share news and insights.",
         notifyKind: "general",
         logPrefix: "[general newsletter]",
     });

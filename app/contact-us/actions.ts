@@ -78,6 +78,6 @@ export async function submitContactForm(
     return {
         ok: true,
         message:
-            "Thank you — your message was sent. A specialist will reach out shortly.",
+            "Thank you - your message was sent. A specialist will reach out shortly.",
     };
 }

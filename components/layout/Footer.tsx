@@ -1,34 +1,36 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const footerGroups: { title: string; links: { title: string; url: string }[] }[] =
-    [
-        {
-            title: "Platform",
-            links: [
-                { title: "Products", url: "/products" },
-                { title: "Payer", url: "/payer" },
-                { title: "Provider", url: "/provider" },
-                { title: "Technology", url: "/technology" },
-            ],
-        },
-        {
-            title: "Company",
-            links: [
-                { title: "About Us", url: "/about-us" },
-                { title: "News", url: "/news" },
-                { title: "Career", url: "/career" },
-                { title: "Blog", url: "/blog" },
-            ],
-        },
-        {
-            title: "Resources",
-            links: [
-                { title: "Contact", url: "/contact-us" },
-                { title: "Rate Card", url: "/rate-card" },
-            ],
-        },
-    ];
+const footerGroups: {
+    title: string;
+    links: { title: string; url: string }[];
+}[] = [
+    {
+        title: "Platform",
+        links: [
+            { title: "Products", url: "/products" },
+            { title: "Payer", url: "/payer" },
+            { title: "Provider", url: "/provider" },
+            { title: "Technology", url: "/technology" },
+        ],
+    },
+    {
+        title: "Company",
+        links: [
+            { title: "About Us", url: "/about-us" },
+            { title: "News", url: "/news" },
+            { title: "Career", url: "/career" },
+            { title: "Blog", url: "/blog" },
+        ],
+    },
+    {
+        title: "Resources",
+        links: [
+            { title: "Contact", url: "/contact-us" },
+            { title: "Rate Card", url: "/rate-card" },
+        ],
+    },
+];
 
 const SUPPORT_EMAIL = "communication@basys.ai";
 
@@ -64,9 +66,9 @@ export function Footer() {
                             />
                         </Link>
                         <p className="mt-6 max-w-sm text-sm leading-relaxed text-on-surface-variant">
-                            Enterprise-grade AI agents for prior authorization and
-                            clinical workflows—built for health plans and provider
-                            networks.
+                            Enterprise-grade AI agents for prior authorization
+                            and clinical workflows-built for health plans and
+                            provider networks.
                         </p>
                         <a
                             href={`mailto:${SUPPORT_EMAIL}`}
@@ -107,7 +109,8 @@ export function Footer() {
 
                 <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-outline-variant/50 pt-8 md:flex-row md:items-center">
                     <p className="text-xs text-on-surface-variant">
-                        © {new Date().getFullYear()} basys.ai. All rights reserved.
+                        © {new Date().getFullYear()} basys.ai. All rights
+                        reserved.
                     </p>
                     <nav
                         className="flex flex-wrap gap-x-6 gap-y-2"

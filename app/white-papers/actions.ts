@@ -89,6 +89,6 @@ export async function submitWhitepaperRequest(
     return {
         ok: true,
         message:
-            "Thank you — we received your request. Our team will follow up with the white paper.",
+            "Thank you - we received your request. Our team will follow up with the white paper.",
     };
 }

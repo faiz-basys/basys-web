@@ -41,8 +41,7 @@ export async function sendCareersApplicationEmail(
 
     const replyTo = payload.applicantEmail;
     const resumeBuf = Buffer.from(await payload.resume.arrayBuffer());
-    const resumeName =
-        payload.resume.name.trim() || "resume attachment";
+    const resumeName = payload.resume.name.trim() || "resume attachment";
 
     const textLines = [
         `New careers application`,
@@ -113,7 +112,7 @@ ${coverBlock}
         from,
         to,
         replyTo,
-        subject: `[Careers] ${payload.roleTitle} — ${payload.applicantName}`,
+        subject: `[Careers] ${payload.roleTitle} - ${payload.applicantName}`,
         text: textLines.join("\n"),
         html,
         attachments: [

@@ -1,6 +1,6 @@
 /**
  * Sendy returns plain text `true` (docs) or `1` (common in the wild) on success.
- * @see https://sendy.co/api — Subscribe
+ * @see https://sendy.co/api - Subscribe
  */
 export function isSendySubscribeSuccess(body: string): boolean {
     const t = body.trim().toLowerCase();

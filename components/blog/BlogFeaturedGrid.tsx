@@ -7,9 +7,7 @@ function linkTarget(item: BlogItem): {
     hasLink: boolean;
 } {
     const isBasys = item.kind === "basys";
-    const hasLink = isBasys
-        ? item.slug.length > 0
-        : item.url.length > 0;
+    const hasLink = isBasys ? item.slug.length > 0 : item.url.length > 0;
     const href = isBasys ? `/blog/${item.slug}` : item.url;
     return { href, isBasys, hasLink };
 }
@@ -37,8 +35,8 @@ function FeaturedCta({
         return (
             <span className={idle}>
                 {item.kind === "basys"
-                    ? "Detail page — add a slug when ready"
-                    : "External link — add URL when ready"}
+                    ? "Detail page - add a slug when ready"
+                    : "External link - add URL when ready"}
             </span>
         );
     }
@@ -89,8 +87,8 @@ function FeaturedCardC({ item }: { item: BlogItem }) {
             <div className="mb-4 flex flex-wrap items-center gap-2">
                 <span className="text-lg font-bold tracking-tight">
                     {item.kind === "basys"
-                        ? item.author ?? "Basys.ai"
-                        : item.author ?? "Partner"}
+                        ? (item.author ?? "Basys.ai")
+                        : (item.author ?? "Partner")}
                 </span>
                 <span className="text-xs text-outline">• Insight</span>
             </div>
@@ -100,7 +98,9 @@ function FeaturedCardC({ item }: { item: BlogItem }) {
                 {item.title}
             </h4>
             {item.description ? (
-                <p className="mb-4 text-sm text-secondary">{item.description}</p>
+                <p className="mb-4 text-sm text-secondary">
+                    {item.description}
+                </p>
             ) : null}
             <div className="flex items-center gap-2 text-xs font-semibold text-primary">
                 <span className="material-symbols-outlined text-sm">link</span>
@@ -162,7 +162,7 @@ export function BlogFeaturedGrid({ items }: { items: BlogItem[] }) {
                 <div>
                     <div className="mb-6 flex items-start justify-between">
                         <span className="text-xs font-semibold tracking-widest text-on-tertiary-container uppercase">
-                            {heroEyebrow} — {formatBlogDate(a.date)}
+                            {heroEyebrow} - {formatBlogDate(a.date)}
                         </span>
                         <div className="flex h-8 w-24 items-center justify-center rounded bg-surface-container text-[10px] font-bold text-slate-400">
                             basys.ai
@@ -293,8 +293,8 @@ export function BlogFeaturedGrid({ items }: { items: BlogItem[] }) {
                             </p>
                         ) : (
                             <p className="text-sm text-on-primary/70">
-                                Stay current on basys.ai perspectives and industry
-                                trends.
+                                Stay current on basys.ai perspectives and
+                                industry trends.
                             </p>
                         )}
                     </div>

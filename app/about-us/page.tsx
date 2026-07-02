@@ -143,7 +143,7 @@ const STRATEGIC_ADVISORS: Person[] = [
     {
         name: "Beth Ginzinger",
         role: "Strategic Advisor",
-        bio: "Beth leads transformation at BCBS Arizona. She founded Radiant (now part of Accenture) and Prosano Health, and launched Anthem's Vivity—an innovative care model combining seven top SoCal health systems into one integrated provider network.",
+        bio: "Beth leads transformation at BCBS Arizona. She founded Radiant (now part of Accenture) and Prosano Health, and launched Anthem's Vivity-an innovative care model combining seven top SoCal health systems into one integrated provider network.",
         imageSrc: "/people/beth-ginzinger.jpeg",
         imageAlt: "Portrait of Beth Ginzinger.",
         linkedinUrl: "https://www.linkedin.com/in/beth-ginzinger-7a92558/",

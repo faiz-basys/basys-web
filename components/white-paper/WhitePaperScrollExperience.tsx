@@ -7,7 +7,10 @@ import {
     WHITE_PAPERS,
     type WhitePaper,
 } from "@/components/white-paper/white-paper-data";
-import { scrollElementWithinContainer, smoothScrollToId } from "@/lib/smoothScroll";
+import {
+    scrollElementWithinContainer,
+    smoothScrollToId,
+} from "@/lib/smoothScroll";
 import {
     useCallback,
     useEffect,
@@ -59,7 +62,10 @@ function ScrollSection({
         const visibilityObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+                    if (
+                        entry.isIntersecting &&
+                        entry.intersectionRatio >= 0.35
+                    ) {
                         onVisible(index);
                     }
                 });
@@ -210,7 +216,7 @@ function WhitePaperBlock({
                         </p>
                     </div>
 
-                    {/* Desktop: fixed-height column — header + scrollable nav + footer */}
+                    {/* Desktop: fixed-height column - header + scrollable nav + footer */}
                     <div className="hidden min-h-0 flex-1 flex-col lg:flex">
                         <div className="shrink-0">
                             <div className="flex items-center justify-between gap-3">

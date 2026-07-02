@@ -26,7 +26,7 @@ export default function NewsPage() {
 
             <GeneralNewsletterCtaSection
                 title="Stay in the loop"
-                description="Get basys.ai announcements, press highlights, and product news — occasional emails, no clutter."
+                description="Get basys.ai announcements, press highlights, and product news - occasional emails, no clutter."
             />
             <FinalCtaSection />
         </main>

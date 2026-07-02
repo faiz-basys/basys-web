@@ -86,7 +86,7 @@ export const WHITE_PAPERS: WhitePaper[] = [
         title: "Closing the Blind Spots in Fraud, Waste & Abuse",
         subtitle: "Physician-first AI for smarter payment integrity",
         description:
-            "Fraud doesn't hide in data—it hides between organizations. See how explainable AI helps health plans detect FWA with transparency and trust.",
+            "Fraud doesn't hide in data-it hides between organizations. See how explainable AI helps health plans detect FWA with transparency and trust.",
         accent: "#0a2540",
         accentMuted: "#eef2f7",
         sections: [
@@ -96,7 +96,7 @@ export const WHITE_PAPERS: WhitePaper[] = [
                 headline:
                     "Fraud doesn't hide in data. It hides between organizations.",
                 subheadline:
-                    "Hospitals, insurers, and providers each hold part of the picture—but blind spots persist at every handoff.",
+                    "Hospitals, insurers, and providers each hold part of the picture-but blind spots persist at every handoff.",
                 type: "cards",
                 cards: [
                     {
@@ -207,14 +207,13 @@ export const WHITE_PAPERS: WhitePaper[] = [
             {
                 id: "reviewer-evidence",
                 navLabel: "The future",
-                headline:
-                    "The future of FWA isn't replacing reviewers.",
+                headline: "The future of FWA isn't replacing reviewers.",
                 subheadline: "It's giving them better evidence.",
                 type: "bullets",
                 bullets: [
                     {
                         title: "Explainable AI",
-                        body: "Transparent feature attributions and rationales—not opaque risk scores alone",
+                        body: "Transparent feature attributions and rationales-not opaque risk scores alone",
                     },
                     {
                         title: "Human oversight",
@@ -276,8 +275,7 @@ export const WHITE_PAPERS: WhitePaper[] = [
             {
                 id: "traditional-ai",
                 navLabel: "Why AI fails",
-                headline:
-                    "Traditional AI Doesn't Work for Prior Authorization",
+                headline: "Traditional AI Doesn't Work for Prior Authorization",
                 type: "cards",
                 cards: [
                     {

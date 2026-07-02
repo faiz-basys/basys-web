@@ -85,8 +85,8 @@ export async function sendNewsletterSubscriberNotification(
         to,
         subject:
             payload.listKind === "career"
-                ? `[Newsletter] New career subscriber — basys.ai`
-                : `[Newsletter] New general subscriber — basys.ai`,
+                ? `[Newsletter] New career subscriber - basys.ai`
+                : `[Newsletter] New general subscriber - basys.ai`,
         text,
         html,
     });

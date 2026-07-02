@@ -11,7 +11,7 @@ const STEPS = [
 
 /**
  * Hero illustration: single-track PA lifecycle with a traveling emphasis orb.
- * Not a grid, scrolling stream, or orbit — horizontal pipeline only.
+ * Not a grid, scrolling stream, or orbit - horizontal pipeline only.
  */
 export function PriorAuthHeroVisual() {
     const [reduceMotion, setReduceMotion] = useState(false);
@@ -56,7 +56,7 @@ export function PriorAuthHeroVisual() {
                 </div>
             </div>
 
-            {/* Curved connector SVG — flow between nodes */}
+            {/* Curved connector SVG - flow between nodes */}
             <div className="relative z-10 mt-2 flex min-h-0 flex-1 flex-col justify-center">
                 <svg
                     className="pointer-events-none absolute inset-x-4 top-[22%] z-0 h-24 w-[calc(100%-2rem)] text-outline/25"
@@ -126,7 +126,7 @@ export function PriorAuthHeroVisual() {
                 </div>
             </div>
 
-            {/* Status strip — mirrors UM outcomes */}
+            {/* Status strip - mirrors UM outcomes */}
             <div className="relative z-10 mt-auto space-y-2 rounded-2xl border border-outline/10 bg-surface-container/90 p-4 backdrop-blur-sm">
                 <div className="flex items-center justify-between text-[11px]">
                     <span className="text-on-surface-variant">

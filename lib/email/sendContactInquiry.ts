@@ -77,7 +77,7 @@ ${emailPlainTextBlock("Message", payload.message.trim() || "(empty)")}
         from,
         to,
         replyTo,
-        subject: `[Contact] ${payload.name} — basys.ai inquiry`,
+        subject: `[Contact] ${payload.name} - basys.ai inquiry`,
         text,
         html,
     });

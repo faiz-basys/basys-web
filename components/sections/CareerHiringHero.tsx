@@ -10,6 +10,8 @@ function shortTitle(title: string): string {
     return `${words.slice(0, 2).join(" ")}…`;
 }
 
+const ORBIT_RADIUS_PX = 148;
+
 export function CareerHiringHero({ roles = [] }: { roles?: CareerHeroRole[] }) {
     const count = roles.length;
     const angleStep = count > 0 ? 360 / count : 0;
@@ -45,12 +47,11 @@ export function CareerHiringHero({ roles = [] }: { roles?: CareerHeroRole[] }) {
                 <div className="relative mx-auto flex min-h-[300px] max-w-[380px] items-center justify-center sm:min-h-[340px]">
                     <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
                         <div
-                            className="absolute h-[72%] max-h-[280px] w-[72%] max-w-[280px] rounded-full border border-primary/8 animate-career-orbit-ring motion-reduce:animate-none"
-                            aria-hidden
-                        />
-                        <div
-                            className="absolute h-[86%] max-h-[320px] w-[86%] max-w-[320px] rounded-full border border-primary/6 animate-career-orbit-ring motion-reduce:animate-none"
-                            style={{ animationDelay: "1.2s" }}
+                            className="absolute rounded-full border border-primary/8 animate-career-orbit-ring motion-reduce:animate-none"
+                            style={{
+                                width: ORBIT_RADIUS_PX * 2,
+                                height: ORBIT_RADIUS_PX * 2,
+                            }}
                             aria-hidden
                         />
                     </div>
@@ -70,7 +71,7 @@ export function CareerHiringHero({ roles = [] }: { roles?: CareerHeroRole[] }) {
                         </p>
                         <p className="mt-2 text-xs leading-relaxed text-on-primary/75">
                             {count === 0
-                                ? "New roles open regularly—join the list below to hear first."
+                                ? "New roles open regularly-join the list below to hear first."
                                 : "Basys is a healthcare AI company, built by people who care about outcomes."}
                         </p>
                     </div>
@@ -80,25 +81,30 @@ export function CareerHiringHero({ roles = [] }: { roles?: CareerHeroRole[] }) {
                             {roles.map((role, i) => (
                                 <div
                                     key={role.title}
-                                    className="absolute left-1/2 top-1/2"
-                                    style={{
-                                        transform: `translate(-50%, -50%) rotate(${i * angleStep}deg) translateY(-148px)`,
-                                    }}
+                                    className="absolute top-1/2 left-1/2 h-0 w-0"
                                 >
-                                    <div className="flex max-w-[132px] -translate-x-1/2 flex-col items-center animate-career-orbit-counter motion-reduce:animate-none">
-                                        <div className="rounded-2xl border border-outline/15 bg-white/95 px-3 py-2.5 text-center shadow-[0_8px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm">
-                                            <span
-                                                className="material-symbols-outlined mb-1 block text-[20px] text-primary"
-                                                aria-hidden
-                                            >
-                                                {role.icon}
-                                            </span>
-                                            <p className="text-[10px] font-semibold leading-snug text-primary sm:text-[11px]">
-                                                {shortTitle(role.title)}
-                                            </p>
-                                            <p className="mt-1 line-clamp-2 text-[9px] leading-snug text-on-surface-variant">
-                                                {role.title}
-                                            </p>
+                                    <div
+                                        style={{
+                                            transform: `rotate(${i * angleStep}deg) translateY(-${ORBIT_RADIUS_PX}px) rotate(${-i * angleStep}deg)`,
+                                        }}
+                                    >
+                                        <div className="animate-career-orbit-counter motion-reduce:animate-none">
+                                            <div className="flex w-max max-w-[132px] -translate-x-1/2 flex-col items-center">
+                                                <div className="rounded-2xl border border-outline/15 bg-white/95 px-3 py-2.5 text-center shadow-[0_8px_24px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+                                                    <span
+                                                        className="material-symbols-outlined mb-1 block text-[20px] text-primary"
+                                                        aria-hidden
+                                                    >
+                                                        {role.icon}
+                                                    </span>
+                                                    <p className="text-[10px] font-semibold leading-snug text-primary sm:text-[11px]">
+                                                        {shortTitle(role.title)}
+                                                    </p>
+                                                    <p className="mt-1 line-clamp-2 text-[9px] leading-snug text-on-surface-variant">
+                                                        {role.title}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

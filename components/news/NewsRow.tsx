@@ -3,9 +3,7 @@ import Link from "next/link";
 
 export function NewsRow({ item }: { item: NewsItem }) {
     const isBasys = item.kind === "basys";
-    const hasLink = isBasys
-        ? item.slug.length > 0
-        : item.url.length > 0;
+    const hasLink = isBasys ? item.slug.length > 0 : item.url.length > 0;
     const href = isBasys ? `/news/${item.slug}` : item.url;
 
     return (
@@ -62,8 +60,8 @@ export function NewsRow({ item }: { item: NewsItem }) {
             ) : (
                 <span className="text-xs font-medium text-outline">
                     {isBasys
-                        ? "Detail page — add a slug when ready"
-                        : "External link — add URL when ready"}
+                        ? "Detail page - add a slug when ready"
+                        : "External link - add URL when ready"}
                 </span>
             )}
         </article>

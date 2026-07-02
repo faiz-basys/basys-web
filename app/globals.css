@@ -225,7 +225,7 @@ body {
   }
 }
 
-/* Career page — orbital hiring illustration */
+/* Career page - orbital hiring illustration */
 @keyframes career-orbit-slow {
   from {
     transform: rotate(0deg);
@@ -247,7 +247,7 @@ body {
   }
 }
 
-/* Product pages — MRR hero (document scan + validation chips, no grid) */
+/* Product pages - MRR hero (document scan + validation chips, no grid) */
 @keyframes mrr-stack-shift {
   0%,
   100% {
@@ -303,7 +303,7 @@ body {
   }
 }
 
-/* Prior auth hero — curved path emphasis */
+/* Prior auth hero - curved path emphasis */
 @keyframes pa-flow-stroke {
   from {
     stroke-dashoffset: 420;

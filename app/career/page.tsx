@@ -83,7 +83,7 @@ export default function CareerPage() {
                                 </span>
                                 <h2 className="mb-4 max-w-xl text-3xl font-semibold">
                                     Build healthcare AI alongside researchers,
-                                    clinicians, and platform engineers—where
+                                    clinicians, and platform engineers-where
                                     your craft shows up in real care pathways.
                                 </h2>
                                 <div className="flex flex-wrap items-center gap-6">

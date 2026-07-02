@@ -49,10 +49,10 @@ export const basysArticleBodyBySlug: Record<string, ReactNode> = {
                     emerging regulatory frameworks. Our product roadmap is
                     shaped by real-world feedback from stakeholders navigating
                     the day-to-day complexity of utilization management. As
-                    healthcare continues its digital transformation, we recognize
-                    the responsibility that comes with building and deploying
-                    AI in this space. We are focused on staying ahead of
-                    what&apos;s next, while keeping trust, transparency, and
+                    healthcare continues its digital transformation, we
+                    recognize the responsibility that comes with building and
+                    deploying AI in this space. We are focused on staying ahead
+                    of what&apos;s next, while keeping trust, transparency, and
                     patient impact at the core of everything we do.
                 </p>
                 <p>
@@ -65,7 +65,7 @@ export const basysArticleBodyBySlug: Record<string, ReactNode> = {
         (
             <div className={articleBodyClass}>
                 <p>
-                    Cambridge, MA — basys.ai, the high-fidelity AI platform
+                    Cambridge, MA - basys.ai, the high-fidelity AI platform
                     transforming healthcare policy management, proudly announces
                     its participation in the{" "}
                     <strong>
@@ -132,7 +132,9 @@ export const basysArticleBodyBySlug: Record<string, ReactNode> = {
                     and held accountable across four core areas:
                 </p>
                 <ul className="list-disc space-y-2 pl-6">
-                    <li>Clinical appropriateness and evidence-based alignment</li>
+                    <li>
+                        Clinical appropriateness and evidence-based alignment
+                    </li>
                     <li>Operational timeliness and decision transparency</li>
                     <li>Fairness, equity, and bias mitigation</li>
                     <li>User experience for both providers and members</li>
@@ -159,8 +161,8 @@ export const basysArticleBodyBySlug: Record<string, ReactNode> = {
                 </ul>
                 <p>
                     This patented approach reinforces basys&apos; leadership in
-                    setting the standard for trustworthy, auditable AI in one
-                    of the most regulated industries in the world.
+                    setting the standard for trustworthy, auditable AI in one of
+                    the most regulated industries in the world.
                 </p>
                 <h2 className="text-xl font-semibold text-primary">
                     About basys.ai

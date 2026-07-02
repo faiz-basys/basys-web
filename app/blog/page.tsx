@@ -12,9 +12,7 @@ export default function BlogPage() {
                 <span className="mb-4 inline-block rounded-pill bg-surface-container-high px-4 py-2 text-xs font-semibold tracking-widest text-on-primary-container uppercase">
                     Insights &amp; ideas
                 </span>
-                <h1 className="mb-2 text-5xl font-bold text-primary">
-                    Blog
-                </h1>
+                <h1 className="mb-2 text-5xl font-bold text-primary">Blog</h1>
                 <p className="max-w-2xl text-lg text-secondary">
                     Long-form perspectives on agentic AI, healthcare policy,
                     clinical operations, and the future of autonomous health
@@ -26,7 +24,7 @@ export default function BlogPage() {
 
             <GeneralNewsletterCtaSection
                 title="Never miss an insight"
-                description="Subscribe for new articles on agentic AI, policy, and clinical operations — plus occasional company updates."
+                description="Subscribe for new articles on agentic AI, policy, and clinical operations - plus occasional company updates."
             />
             <FinalCtaSection />
         </main>

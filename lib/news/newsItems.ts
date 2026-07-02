@@ -8,7 +8,7 @@ export type NewsItemBasys = {
     date: string;
     title: string;
     description?: string;
-    /** Route segment under /news/ — set when the detail page exists */
+    /** Route segment under /news/ - set when the detail page exists */
     slug: string;
     /** Override automatic tab assignment (press / media / corporate) */
     facets?: NewsFacet[];
@@ -19,7 +19,7 @@ export type NewsItemThirdParty = {
     date: string;
     title: string;
     description?: string;
-    /** Full external URL — set when the piece is live */
+    /** Full external URL - set when the piece is live */
     url: string;
     facets?: NewsFacet[];
 };
@@ -40,36 +40,31 @@ export const newsItems: NewsItem[] = [
     {
         kind: "thirdParty",
         date: "2026-03-23",
-        title:
-            "Basys.ai Partners with ePathUSA Prime Contractor on AI-Enabled Medical Record Review for CMS",
+        title: "Basys.ai Partners with ePathUSA Prime Contractor on AI-Enabled Medical Record Review for CMS",
         url: "https://www.prnewswire.com/news-releases/basysai-partners-with-epathusa-prime-contractor-on-ai-enabled-medical-record-review-for-cms-302721458.html/",
     },
     {
         kind: "basys",
         date: "2025-06-22",
-        title:
-            "basys.ai is recognized in Gartner's 2025 Hype cycle for transforming AI driven Prior Auth.",
+        title: "basys.ai is recognized in Gartner's 2025 Hype cycle for transforming AI driven Prior Auth.",
         slug: "basys-ai-is-recognized-in-gartners-2025-hype-cycle-for-transforming-ai-driven-prior-auth",
     },
     {
         kind: "basys",
         date: "2025-06-17",
-        title:
-            "basys.ai Joins NCQA AI in Healthcare Working Group to Help Define the Future of Trustworthy, Clinically Sound AI",
+        title: "basys.ai Joins NCQA AI in Healthcare Working Group to Help Define the Future of Trustworthy, Clinically Sound AI",
         slug: "basys-ai-joins-ncqa-ai-in-healthcare-working-group-to-help-define-the-future-of-trustworthy-clinically-sound-ai",
     },
     {
         kind: "thirdParty",
         date: "2025-06-09",
-        title:
-            "Smart Data Solutions Tackles Prior Authorization Challenge with Basys.ai",
+        title: "Smart Data Solutions Tackles Prior Authorization Challenge with Basys.ai",
         url: "https://www.fiercehealthcare.com/sponsored/helping-payers-transform-prior-auth-agentic-ai/",
     },
     {
         kind: "thirdParty",
         date: "2025-05-20",
-        title:
-            "From Hype To Infrastructure: The Great Compression Of Health AI",
+        title: "From Hype To Infrastructure: The Great Compression Of Health AI",
         url: "https://www.forbes.com/councils/forbesbusinesscouncil/2025/05/20/from-hype-to-infrastructure-the-great-compression-of-health-ai/",
     },
     {
@@ -81,8 +76,7 @@ export const newsItems: NewsItem[] = [
     {
         kind: "thirdParty",
         date: "2024-12-16",
-        title:
-            "19 Ways To Effectively Integrate AI Into Business Processes In 2025",
+        title: "19 Ways To Effectively Integrate AI Into Business Processes In 2025",
         description:
             "Learn how basys.ai ensures AI remains responsive, relevant and aligned with provider needs.",
         url: "https://www.forbes.com/councils/forbesbusinesscouncil/2024/12/16/19-ways-to-effectively-integrate-ai-into-business-processes-in-2025/",
@@ -102,8 +96,7 @@ export const newsItems: NewsItem[] = [
     {
         kind: "thirdParty",
         date: "2023-10-08",
-        title:
-            "Basys.ai grabs $2.4M for its prior authorization tech powered by Mayo Clinic's data",
+        title: "Basys.ai grabs $2.4M for its prior authorization tech powered by Mayo Clinic's data",
         description:
             "Learn how basys.ai helps health plans and health systems adopt value-based care, starting with prior authorization.",
         url: "https://techcrunch.com/2023/08/10/basys-ai-2-4m-prior-authorization-mayo-clinic-healthcare/",
@@ -117,8 +110,7 @@ export const newsItems: NewsItem[] = [
     {
         kind: "thirdParty",
         date: "2022-08-09",
-        title:
-            "Amber Nigam: Improving Metabolic Health for Billions through AI",
+        title: "Amber Nigam: Improving Metabolic Health for Billions through AI",
         description:
             "Learn how basys.ai enables providers in their journey of managing metabolic health for billions through artificial intelligence (AI).",
         url: "https://www.nasdaq.com/articles/amber-nigam%3A-improving-metabolic-health-for-billions-through-ai",
@@ -168,9 +160,7 @@ export function formatNewsDate(isoDate: string): string {
     });
 }
 
-export function getBasysNewsBySlug(
-    slug: string,
-): NewsItemBasys | undefined {
+export function getBasysNewsBySlug(slug: string): NewsItemBasys | undefined {
     const found = newsItems.find(
         (item): item is NewsItemBasys =>
             item.kind === "basys" && item.slug === slug,

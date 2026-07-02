@@ -94,8 +94,7 @@ export async function submitJobApplication(
     if (!(resume instanceof File)) {
         fieldErrors.resume = "Please attach your resume.";
     } else if (!isAllowedResume(resume)) {
-        fieldErrors.resume =
-            "Upload a PDF or Word file under 5 MB.";
+        fieldErrors.resume = "Upload a PDF or Word file under 5 MB.";
     }
 
     if (Object.keys(fieldErrors).length > 0) {
@@ -142,6 +141,6 @@ export async function submitJobApplication(
     return {
         ok: true,
         message:
-            "Thank you — your application was received. Our recruiting team will follow up by email.",
+            "Thank you - your application was received. Our recruiting team will follow up by email.",
     };
 }
